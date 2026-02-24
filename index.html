@@ -22,6 +22,18 @@
         h2 { font-size: 0.7rem !important; }
         h3 { font-size: 1rem !important; color: #fff; }
         .profile-img { width: 100px; height: 100px; object-fit: cover; border: 1px solid #333; }
+        
+        /* 🖨️ PDF 인쇄용 스타일 (자동 색상 반전 - 라이트모드) */
+        @media print {
+            body { background-color: #ffffff !important; color: #111827 !important; }
+            * { color: #111827 !important; } /* 모든 글씨를 검은색으로 강제 변경 */
+            .project-card, .exp-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
+            .tech-tag { background-color: #f3f4f6 !important; border-color: #9ca3af !important; color: #374151 !important; }
+            .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
+            .profile-img { border-color: #e5e7eb !important; }
+            .no-print { display: none !important; } /* PDF 버튼 및 불필요한 링크 숨기기 */
+            @page { margin: 15mm; } /* PDF 여백 최적화 */
+        }
     </style>
 </head>
 <body class="p-6 md:p-16 max-w-5xl mx-auto">
@@ -37,8 +49,11 @@
                     style="user-select: none; -webkit-user-drag: none;">
                 <div>
                     <h1 class="tracking-tighter uppercase leading-none mb-2">JEONG HEESIK</h1>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 items-center">
                         <span class="edu-badge mono uppercase text-white">Sogang Univ. GS AI·SW (AI·DS)</span>
+                        <button onclick="window.print()" class="no-print mono text-[10px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-2 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
+                            <i class="fas fa-file-pdf"></i> Save as PDF
+                        </button>
                     </div>
                 </div>
             </div>
@@ -98,7 +113,7 @@
                         <span class="tech-tag">LangGraph</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Weaviate</span>
                     </div>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
+                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
             </div>
 
             <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
@@ -112,7 +127,7 @@
                         <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
                     </div>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
+                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
             </div>
 
             <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
@@ -126,7 +141,7 @@
                         <span class="tech-tag">Hugging Face</span><span class="tech-tag">PyTorch</span><span class="tech-tag">NLP</span>
                     </div>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
+                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
             </div>
 
             <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
@@ -140,7 +155,7 @@
                         <span class="tech-tag">Python</span><span class="tech-tag">Vector DB</span><span class="tech-tag">System Design</span>
                     </div>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
+                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
             </div>
         </div>
     </section>
@@ -188,7 +203,7 @@
         </div>
     </section>
 
-    <footer class="mt-20 pt-8 border-t border-gray-900 flex justify-between items-center text-gray-600 mono text-[9px] uppercase tracking-widest">
+    <footer class="no-print mt-20 pt-8 border-t border-gray-900 flex justify-between items-center text-gray-600 mono text-[9px] uppercase tracking-widest">
         <p>© 2026 JEONGHEESIK.</p>
         <div class="flex space-x-6 text-white">
             <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-gray-400">Github</a>
