@@ -16,6 +16,7 @@
         a { transition: color 0.2s; }
         a:hover { color: #888; }
         .edu-badge { border: 1px solid #444; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; color: #ccc; }
+        .main-highlight { border-left: 2px solid #ffffff; }
     </style>
 </head>
 <body class="p-6 md:p-24 max-w-5xl mx-auto">
@@ -30,8 +31,8 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <p class="text-xl text-gray-400 font-light leading-relaxed">
-                AI Engineer focusing on building reliable AI systems beyond simple API integrations. 
-                Specializing in Agentic RAG pipelines, SLM fine-tuning, and system architecture.
+                AI Engineer specializing in **Autonomous Agents** and **Reliable AI Systems**. 
+                Expertise in Reinforcement Learning, Agentic RAG pipelines, and SLM optimization.
             </p>
             <div class="flex flex-col justify-end md:items-end space-y-2 mono text-sm text-gray-500">
                 <a href="mailto:koto144@gmail.com">koto144@gmail.com</a>
@@ -42,22 +43,39 @@
     </header>
 
     <section class="mb-32">
-        <h2 class="mono text-xs uppercase tracking-widest text-gray-500 mb-12">/ Selected Projects</h2>
+        <h2 class="mono text-xs uppercase tracking-widest text-gray-500 mb-12">/ Featured Projects</h2>
 
         <div class="space-y-16">
-            <div class="project-card p-10">
+            <div class="project-card p-10 main-highlight">
                 <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-2xl font-bold uppercase tracking-tight">Agentic Graph RAG Pipeline</h3>
+                    <h3 class="text-2xl font-bold uppercase tracking-tight text-white">Agentic Graph RAG Pipeline</h3>
                     <span class="mono text-xs text-gray-600">2026</span>
                 </div>
                 <p class="text-gray-400 mb-6 font-light">질의 복잡도에 따라 Vector, Weaviate Cross-Ref, Neo4j GraphDB로 경로를 분기하는 3-Way 동적 라우팅 및 백트래킹 메커니즘 구축.</p>
+                
                 <div class="flex flex-wrap gap-2 mb-8">
                     <span class="tech-tag">LangGraph</span>
                     <span class="tech-tag">Weaviate</span>
                     <span class="tech-tag">Neo4j</span>
                     <span class="tech-tag">SGLang</span>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
+                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-xs border-b border-gray-700 pb-1" target="_blank">VIEW REPOSITORY _</a>
+            </div>
+
+            <div class="project-card p-10 main-highlight">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight text-white">Crazy Arcade RL Agent</h3>
+                    <span class="mono text-xs text-gray-600">2024</span>
+                </div>
+                <p class="text-gray-400 mb-6 font-light">C++ 게임 서버와 Python 에이전트 간 TCP 소켓 연동 및 607차원 상태 공간 처리를 위한 Fusion 신경망 설계. PPO/DQN 기반 의사결정 에이전트 구현.</p>
+                
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-tag">DQN / PPO</span>
+                    <span class="tech-tag">C++ Socket</span>
+                    <span class="tech-tag">TCP/IP</span>
+                    <span class="tech-tag">Reward Shaping</span>
+                </div>
+                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-xs border-b border-gray-700 pb-1" target="_blank">VIEW REPOSITORY _</a>
             </div>
 
             <div class="project-card p-10">
@@ -65,14 +83,14 @@
                     <h3 class="text-2xl font-bold uppercase tracking-tight">SLM Query Rewriter</h3>
                     <span class="mono text-xs text-gray-600">2025</span>
                 </div>
-                <p class="text-gray-400 mb-6 font-light">Qwen3-0.6B 기반 DPO 및 DoRA를 활용한 한국어 유의어 리라이팅 최적화. 23회차 실험을 통한 최적 가중치 도출 및 배포.</p>
+                <p class="text-gray-400 mb-6 font-light">Qwen3-0.6B 기반 DPO 및 DoRA를 활용한 한국어 유의어 리라이팅 최적화. 23회차 실험을 통한 최적 가중치 도출.</p>
                 <div class="flex flex-wrap gap-2 mb-8">
                     <span class="tech-tag">Qwen3-0.6B</span>
                     <span class="tech-tag">DPO</span>
                     <span class="tech-tag">DoRA</span>
                     <span class="tech-tag">Fine-Tuning</span>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
+                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-xs border-b border-gray-700 pb-1" target="_blank">VIEW REPOSITORY _</a>
             </div>
 
             <div class="project-card p-10">
@@ -80,27 +98,13 @@
                     <h3 class="text-2xl font-bold uppercase tracking-tight">Custom Vector RAG</h3>
                     <span class="mono text-xs text-gray-600">2025</span>
                 </div>
-                <p class="text-gray-400 mb-6 font-light">외부 프레임워크(LangChain 등) 의존성 없이 순수 Python으로 구현한 고성능 커스텀 Vector RAG 엔진.</p>
+                <p class="text-gray-400 mb-6 font-light">외부 프레임워크 의존성 없이 순수 Python으로 구현한 고성능 커스텀 Vector RAG 엔진.</p>
                 <div class="flex flex-wrap gap-2 mb-8">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Vector DB</span>
                     <span class="tech-tag">RAG Architecture</span>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
-            </div>
-
-            <div class="project-card p-10">
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-2xl font-bold uppercase tracking-tight">Crazy Arcade RL Agent</h3>
-                    <span class="mono text-xs text-gray-600">2024</span>
-                </div>
-                <p class="text-gray-400 mb-6 font-light">C++ 게임 서버와 Python 에이전트 간 TCP 소켓 연동 및 607차원 상태 공간 처리를 위한 Fusion 신경망 설계.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="tech-tag">DQN / PPO</span>
-                    <span class="tech-tag">C++ Socket</span>
-                    <span class="tech-tag">Reward Shaping</span>
-                </div>
-                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
+                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-xs border-b border-gray-700 pb-1" target="_blank">VIEW REPOSITORY _</a>
             </div>
         </div>
     </section>
