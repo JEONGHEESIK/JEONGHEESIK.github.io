@@ -26,13 +26,14 @@
         /* 🖨️ PDF 인쇄용 스타일 (자동 색상 반전 - 라이트모드) */
         @media print {
             body { background-color: #ffffff !important; color: #111827 !important; }
-            * { color: #111827 !important; } /* 모든 글씨를 검은색으로 강제 변경 */
+            * { color: #111827 !important; } 
             .project-card, .exp-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
             .tech-tag { background-color: #f3f4f6 !important; border-color: #9ca3af !important; color: #374151 !important; }
             .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
             .profile-img { border-color: #e5e7eb !important; }
-            .no-print { display: none !important; } /* PDF 버튼 및 불필요한 링크 숨기기 */
-            @page { margin: 15mm; } /* PDF 여백 최적화 */
+            .no-print { display: none !important; } 
+            @page { margin: 15mm; }
+            a { text-decoration: none; }
         }
     </style>
 </head>
@@ -69,11 +70,14 @@
                     Currently building reliable AI systems by bridging the gap between low-level system optimization and high-level architecture.
                 </p>
                 <div class="flex flex-wrap gap-4 mono text-[10px] text-gray-500 uppercase">
-                    <a href="mailto:koto144@gmail.com" class="hover:text-white">Email</a>
-                    <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white">Github</a>
-                    <a href="https://blog.naver.com/koto144" target="_blank" class="hover:text-white">Blog</a>
-                    <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white">Linkedin</a>
-                    <a href="https://instagram.com/25thonmay" target="_blank" class="hover:text-white">Instagram</a>
+                    <a href="https://jeongheesik.github.io" target="_blank" class="text-gray-300 font-bold hover:text-white border-b border-gray-700 pb-0.5">
+                        <i class="fas fa-link"></i> Web Portfolio
+                    </a>
+                    <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5">Email</a>
+                    <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white pb-0.5">Github</a>
+                    <a href="https://blog.naver.com/koto144" target="_blank" class="hover:text-white pb-0.5">Blog</a>
+                    <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white pb-0.5">Linkedin</a>
+                    <a href="https://instagram.com/25thonmay" target="_blank" class="hover:text-white pb-0.5">Instagram</a>
                 </div>
             </div>
             
@@ -99,8 +103,34 @@
     </header>
 
     <section class="mb-16">
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold">/ Status</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="exp-card p-5 flex items-center gap-4">
+                <i class="fas fa-map-marker-alt text-gray-500 text-lg"></i>
+                <div>
+                    <span class="block mono text-[10px] text-gray-600 uppercase tracking-widest mb-1">Location</span>
+                    <span class="text-gray-300 text-xs font-semibold">Yongsan-gu, Seoul, KR</span>
+                </div>
+            </div>
+            <div class="exp-card p-5 flex items-center gap-4">
+                <i class="fas fa-briefcase text-gray-500 text-lg"></i>
+                <div>
+                    <span class="block mono text-[10px] text-gray-600 uppercase tracking-widest mb-1">Current</span>
+                    <span class="text-gray-300 text-xs font-semibold">AI Engineer @ NEXTITS</span>
+                </div>
+            </div>
+            <div class="exp-card p-5 flex items-center gap-4">
+                <i class="fas fa-crosshairs text-gray-500 text-lg"></i>
+                <div>
+                    <span class="block mono text-[10px] text-gray-600 uppercase tracking-widest mb-1">Focus</span>
+                    <span class="text-gray-300 text-xs font-semibold">Robotic Agents</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold">/ Project Portfolio</h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
                 <div>
@@ -180,7 +210,7 @@
                     <h3 class="font-bold text-white uppercase tracking-tight">Priceone</h3>
                     <span class="mono text-[10px] text-gray-600 uppercase">2024.08 - 2024.11</span>
                 </div>
-                <p class="text-gray-500 font-light text-xs mb-4">ML Engineer / Dynamic Pricing Recommendation System Development</p>
+                <p class="text-gray-500 font-light text-xs mb-4">ML Engineer / Dynamic Pricing Recommendation System</p>
                 <ul class="text-gray-500 text-xs list-disc list-inside space-y-1 font-light">
                     <li>Developed a dynamic price recommendation algorithm for the hotel's Property Management System (PMS) to optimize revenue.</li>
                     <li>Built data pipelines to scrape competitor pricing from OTA (Online Travel Agencies) platforms and integrate historical internal data.</li>
