@@ -10,26 +10,35 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #000000; color: #d1d5db; line-height: 1.5; font-size: 0.85rem; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .project-card { 
+        .project-card, .exp-card { 
             background: #080808; 
             border: 1px solid #1a1a1a; 
             transition: all 0.2s ease-in-out;
         }
-        .project-card:hover { border-color: #ffffff; background: #0f0f0f; }
+        .project-card:hover, .exp-card:hover { border-color: #ffffff; background: #0f0f0f; }
         .tech-tag { background: #111; color: #9ca3af; border: 1px solid #222; padding: 1px 6px; font-size: 0.65rem; border-radius: 2px; }
         .edu-badge { border: 1px solid #333; padding: 2px 10px; border-radius: 15px; font-size: 0.7rem; color: #9ca3af; }
         h1 { font-size: 2.5rem !important; font-weight: 900 !important; color: #fff; }
         h2 { font-size: 0.7rem !important; }
         h3 { font-size: 1rem !important; color: #fff; }
+        .profile-img { width: 100px; height: 100px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: filter 0.3s; }
+        .profile-img:hover { filter: grayscale(0%); }
     </style>
 </head>
 <body class="p-6 md:p-16 max-w-5xl mx-auto">
 
     <header class="mb-12">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-4">
-            <h1 class="tracking-tighter uppercase leading-none">JEONG HEESIK</h1>
+        <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-6">
+            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                <img src="https://github.com/user-attachments/assets/cfac03df-c1fc-44d1-9fc4-10192c116e8e" alt="JEONGHEESIK" class="profile-img">
+                <div>
+                    <h1 class="tracking-tighter uppercase leading-none mb-2">JEONG HEESIK</h1>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="edu-badge mono uppercase text-white">Sogang Univ. GS AI·SW (AI·DS)</span>
+                    </div>
+                </div>
+            </div>
             <div class="flex flex-col items-start md:items-end gap-1">
-                <span class="edu-badge mono uppercase">Sogang Univ. GS AI·SW (AI·DS)</span>
                 <span class="text-[10px] mono text-gray-600 uppercase tracking-widest">Master's Student (Since Feb 2025)</span>
             </div>
         </div>
@@ -40,10 +49,11 @@
                     AI Engineer specializing in **Autonomous Agents** and **Robotic Decision-Making**. 
                     Bridging the gap between low-level system optimization and high-level AI architecture.
                 </p>
-                <div class="flex space-x-4 mono text-[10px] text-gray-500 uppercase">
+                <div class="flex flex-wrap gap-4 mono text-[10px] text-gray-500 uppercase">
                     <a href="mailto:koto144@gmail.com" class="hover:text-white">Email</a>
                     <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white">Github</a>
                     <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white">Linkedin</a>
+                    <a href="https://instagram.com/25thonmay" target="_blank" class="hover:text-white">Instagram</a>
                 </div>
             </div>
             
@@ -53,14 +63,14 @@
                     <ul class="text-gray-400 space-y-1">
                         <li>PyTorch, TensorFlow</li>
                         <li>ML / DL, RL</li>
-                        <li>LangChain, Hugging Face</li>
+                        <li>LangGraph/LangChain, Hugging Face</li>
                     </ul>
                 </div>
                 <div>
                     <span class="text-gray-600 block mb-2 uppercase tracking-tighter">// Infra & Dev</span>
                     <ul class="text-gray-400 space-y-1">
-                        <li>Python, C++</li>
-                        <li>Docker, FastAPI, Linux</li>
+                        <li>Python, C</li>
+                        <li>Docker, Linux</li>
                         <li>Neo4j, Weaviate, FAISS</li>
                     </ul>
                 </div>
@@ -68,7 +78,7 @@
         </div>
     </header>
 
-    <section>
+    <section class="mb-16">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold">/ Project Portfolio</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -78,13 +88,9 @@
                         <h3 class="uppercase tracking-tight">Agentic Graph RAG</h3>
                         <span class="mono text-[10px] text-gray-700">2026</span>
                     </div>
-                    <p class="text-gray-500 font-light mb-4">
-                        질의 복잡도에 따른 3-Way 동적 라우팅 및 Observer LLM 기반 Quality Gate 구축.
-                    </p>
+                    <p class="text-gray-500 font-light mb-4 text-sm">질의 복잡도에 따른 3-Way 동적 라우팅 및 Observer LLM 기반 Quality Gate 구축.</p>
                     <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">LangGraph</span>
-                        <span class="tech-tag">Neo4j</span>
-                        <span class="tech-tag">Weaviate</span>
+                        <span class="tech-tag">LangGraph</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Weaviate</span>
                     </div>
                 </div>
                 <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
@@ -92,17 +98,13 @@
 
             <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
                 <div>
-                    <div class="flex justify-between items-center mb-3">
+                    <div class="flex justify-between items-center mb-3 text-white">
                         <h3 class="uppercase tracking-tight">Crazy Arcade RL Agent</h3>
                         <span class="mono text-[10px] text-gray-700">2025</span>
                     </div>
-                    <p class="text-gray-500 font-light mb-4">
-                        C++/Python TCP 소켓 연동 기반 실시간 대전 강화학습 및 CNN Fusion 신경망 설계.
-                    </p>
+                    <p class="text-gray-500 font-light mb-4 text-sm">C++/Python TCP 소켓 연동 기반 실시간 대전 강화학습 및 CNN Fusion 신경망 설계.</p>
                     <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">RL</span>
-                        <span class="tech-tag">C++ Socket</span>
+                        <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
                     </div>
                 </div>
                 <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
@@ -114,31 +116,23 @@
                         <h3 class="uppercase tracking-tight">SLM Query Rewriter</h3>
                         <span class="mono text-[10px] text-gray-700">2025</span>
                     </div>
-                    <p class="text-gray-500 font-light mb-4">
-                        Qwen3-0.6B 기반 DPO 파인튜닝을 통한 한국어 유의어 리라이팅 최적화 및 배포.
-                    </p>
+                    <p class="text-gray-500 font-light mb-4 text-sm">Qwen3-0.6B 기반 DPO 파인튜닝을 통한 한국어 유의어 리라이팅 최적화 및 배포.</p>
                     <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">Hugging Face</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Hugging Face</span><span class="tech-tag">PyTorch</span><span class="tech-tag">NLP</span>
                     </div>
                 </div>
                 <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
             </div>
 
-            <div class="project-card p-10 min-h-[220px]">
+            <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
                 <div>
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="uppercase tracking-tight">Custom Vector RAG</h3>
                         <span class="mono text-[10px] text-gray-700">2025</span>
                     </div>
-                    <p class="text-gray-500 font-light mb-4">
-                        외부 프레임워크 의존성 없이 순수 Python으로 구현한 경량화 커스텀 Vector RAG 엔진.
-                    </p>
+                    <p class="text-gray-500 font-light mb-4 text-sm">외부 프레임워크 의존성 없이 순수 Python으로 구현한 경량화 커스텀 Vector RAG 엔진.</p>
                     <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Vector DB</span>
-                        <span class="tech-tag">System Design</span>
+                        <span class="tech-tag">Python</span><span class="tech-tag">Vector DB</span><span class="tech-tag">System Design</span>
                     </div>
                 </div>
                 <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase" target="_blank">View Repo _</a>
@@ -146,11 +140,38 @@
         </div>
     </section>
 
+    <section class="mb-20">
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold">/ Work Experience</h2>
+        <div class="space-y-4">
+            <div class="exp-card p-6">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-white uppercase tracking-tight">Next IT (Current)</h3>
+                    <span class="mono text-[10px] text-gray-600 uppercase">2024.01 - Present</span>
+                </div>
+                <p class="text-gray-500 font-light text-xs mb-4">AI Engineer / SLM Optimization & RAG Pipeline Development</p>
+                <ul class="text-gray-500 text-xs list-disc list-inside space-y-1 font-light">
+                    <li>Led the development of Query Rewriter SLM using Qwen3-0.6B</li>
+                    <li>Designed and implemented custom RAG architecture for internal systems</li>
+                </ul>
+            </div>
+            
+            <div class="exp-card p-6">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-white uppercase tracking-tight">Add Your Next Career</h3>
+                    <span class="mono text-[10px] text-gray-600 uppercase">YYYY.MM - YYYY.MM</span>
+                </div>
+                <p class="text-gray-500 font-light text-xs mb-2">Position / Key Role</p>
+                <p class="text-gray-600 text-[10px] mono uppercase tracking-tighter italic">Details to be updated...</p>
+            </div>
+        </div>
+    </section>
+
     <footer class="mt-20 pt-8 border-t border-gray-900 flex justify-between items-center text-gray-600 mono text-[9px] uppercase tracking-widest">
-        <p>© 2026 JEONGHEESIK. SOGANG AI·SW.</p>
-        <div class="flex space-x-6">
-            <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white">Github</a>
-            <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white">Linkedin</a>
+        <p>© 2026 JEONGHEESIK.</p>
+        <div class="flex space-x-6 text-white">
+            <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-gray-400">Github</a>
+            <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-gray-400">Linkedin</a>
+            <a href="https://instagram.com/25thonmay" target="_blank" class="hover:text-gray-400">Instagram</a>
         </div>
     </footer>
 
