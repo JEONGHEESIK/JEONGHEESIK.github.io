@@ -32,6 +32,7 @@
             .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
             .profile-img { border-color: #e5e7eb !important; }
             .no-print { display: none !important; } 
+            footer { border-color: #e5e7eb !important; } /* PDF 인쇄 시 푸터 얇은 선 색상 조정 */
             @page { margin: 15mm; }
             a { text-decoration: none; }
         }
@@ -70,9 +71,6 @@
                     Currently building reliable AI systems by bridging the gap between low-level system optimization and high-level architecture.
                 </p>
                 <div class="flex flex-wrap gap-4 mono text-[10px] text-gray-500 uppercase">
-                    <a href="https://jeongheesik.github.io" target="_blank" class="text-gray-300 font-bold hover:text-white border-b border-gray-700 pb-0.5">
-                        <i class="fas fa-link"></i> Web Portfolio
-                    </a>
                     <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5">Email</a>
                     <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white pb-0.5">Github</a>
                     <a href="https://blog.naver.com/koto144" target="_blank" class="hover:text-white pb-0.5">Blog</a>
@@ -233,12 +231,12 @@
         </div>
     </section>
 
-    <footer class="no-print mt-20 pt-8 border-t border-gray-900 flex justify-between items-center text-gray-600 mono text-[9px] uppercase tracking-widest">
+    <footer class="mt-20 pt-8 border-t border-gray-900 flex justify-between items-center text-gray-600 mono text-[10px] uppercase tracking-widest">
         <p>© 2026 JEONGHEESIK.</p>
-        <div class="flex space-x-6 text-white">
-            <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-gray-400">Github</a>
-            <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-gray-400">Linkedin</a>
-            <a href="https://instagram.com/25thonmay" target="_blank" class="hover:text-gray-400">Instagram</a>
+        <div class="flex items-center">
+            <a href="https://jeongheesik.github.io" target="_blank" class="text-gray-400 font-bold hover:text-white border-b border-gray-700 pb-0.5 transition-colors">
+                <i class="fas fa-link mr-1"></i> Web Portfolio
+            </a>
         </div>
     </footer>
 
