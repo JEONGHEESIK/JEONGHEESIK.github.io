@@ -8,43 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #000000; 
-            color: #ffffff; 
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #ffffff; line-height: 1.6; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .project-card { 
-            background: #0a0a0a; 
-            border: 1px solid #222; 
-            transition: all 0.3s ease;
-        }
-        .project-card:hover { 
-            border-color: #ffffff; 
-            background: #111111;
-        }
-        .tech-tag {
-            background: #1a1a1a;
-            color: #888;
-            border: 1px solid #333;
-            padding: 2px 8px;
-            font-size: 0.75rem;
-            border-radius: 4px;
-        }
-        hr { border: 0; border-top: 1px solid #222; margin: 40px 0; }
+        .project-card { background: #0a0a0a; border: 1px solid #222; transition: all 0.3s ease; }
+        .project-card:hover { border-color: #ffffff; background: #111111; }
+        .tech-tag { background: #1a1a1a; color: #888; border: 1px solid #333; padding: 2px 8px; font-size: 0.75rem; border-radius: 4px; }
         a { transition: color 0.2s; }
         a:hover { color: #888; }
+        .edu-badge { border: 1px solid #444; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; color: #ccc; }
     </style>
 </head>
 <body class="p-6 md:p-24 max-w-5xl mx-auto">
 
     <header class="mb-32">
-        <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase">JEONG <br/>HEESIK</h1>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+            <h1 class="text-6xl font-black tracking-tighter uppercase leading-none">JEONG <br/>HEESIK</h1>
+            <div class="flex flex-col items-start md:items-end gap-2">
+                <span class="edu-badge mono">Sogang Univ. GS AI·SW (AI·DS)</span>
+                <span class="text-xs mono text-gray-500">Master's Student (Since Feb 2025)</span>
+            </div>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <p class="text-xl text-gray-400 font-light leading-relaxed">
                 AI Engineer focusing on building reliable AI systems beyond simple API integrations. 
-                I specialize in model fine-tuning and system architecture.
+                Specializing in Agentic RAG pipelines, SLM fine-tuning, and system architecture.
             </p>
             <div class="flex flex-col justify-end md:items-end space-y-2 mono text-sm text-gray-500">
                 <a href="mailto:koto144@gmail.com">koto144@gmail.com</a>
@@ -55,49 +42,22 @@
     </header>
 
     <section class="mb-32">
-        <h2 class="mono text-xs uppercase tracking-widest text-gray-500 mb-12">/ Technical Stack</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="font-bold mb-4 uppercase">AI / ML</h3>
-                <ul class="text-gray-500 space-y-2 text-sm mono">
-                    <li>PyTorch, LangGraph</li>
-                    <li>Hugging Face, SGLang</li>
-                    <li>RL (DQN, PPO)</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-bold mb-4 uppercase">Infra</h3>
-                <ul class="text-gray-500 space-y-2 text-sm mono">
-                    <li>Weaviate, Neo4j, FAISS</li>
-                    <li>Docker, FastAPI, Ollama</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-bold mb-4 uppercase">Dev</h3>
-                <ul class="text-gray-500 space-y-2 text-sm mono">
-                    <li>Python</li>
-                    <li>C++ (Socket Programming)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-32">
         <h2 class="mono text-xs uppercase tracking-widest text-gray-500 mb-12">/ Selected Projects</h2>
 
         <div class="space-y-16">
             <div class="project-card p-10">
                 <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-2xl font-bold uppercase tracking-tight">Agentic Graph RAG</h3>
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Agentic Graph RAG Pipeline</h3>
                     <span class="mono text-xs text-gray-600">2026</span>
                 </div>
-                <p class="text-gray-400 mb-6 font-light">복잡한 다중 홉 질의 해결을 위한 3-Way 동적 라우팅 시스템 설계 및 신뢰성 확보.</p>
+                <p class="text-gray-400 mb-6 font-light">질의 복잡도에 따라 Vector, Weaviate Cross-Ref, Neo4j GraphDB로 경로를 분기하는 3-Way 동적 라우팅 및 백트래킹 메커니즘 구축.</p>
                 <div class="flex flex-wrap gap-2 mb-8">
                     <span class="tech-tag">LangGraph</span>
+                    <span class="tech-tag">Weaviate</span>
                     <span class="tech-tag">Neo4j</span>
                     <span class="tech-tag">SGLang</span>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-xs border-b border-gray-700 pb-1">VIEW PROJECT _</a>
+                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
             </div>
 
             <div class="project-card p-10">
@@ -105,41 +65,53 @@
                     <h3 class="text-2xl font-bold uppercase tracking-tight">SLM Query Rewriter</h3>
                     <span class="mono text-xs text-gray-600">2025</span>
                 </div>
-                <p class="text-gray-400 mb-6 font-light">Qwen3-0.6B 기반 DPO 파인튜닝을 통한 한국어 유의어 리라이팅 최적화.</p>
+                <p class="text-gray-400 mb-6 font-light">Qwen3-0.6B 기반 DPO 및 DoRA를 활용한 한국어 유의어 리라이팅 최적화. 23회차 실험을 통한 최적 가중치 도출 및 배포.</p>
                 <div class="flex flex-wrap gap-2 mb-8">
                     <span class="tech-tag">Qwen3-0.6B</span>
                     <span class="tech-tag">DPO</span>
                     <span class="tech-tag">DoRA</span>
+                    <span class="tech-tag">Fine-Tuning</span>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-xs border-b border-gray-700 pb-1">GITHUB _</a>
-                    <span class="mono text-xs text-gray-600">DEPLOYED ON HF</span>
-                </div>
+                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
             </div>
 
             <div class="project-card p-10">
                 <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-2xl font-bold uppercase tracking-tight">Custom RL Agent</h3>
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Custom Vector RAG</h3>
                     <span class="mono text-xs text-gray-600">2025</span>
                 </div>
-                <p class="text-gray-400 mb-6 font-light">C++/Python TCP 소켓 연동 기반 실시간 대전 강화학습 환경 구축.</p>
+                <p class="text-gray-400 mb-6 font-light">외부 프레임워크(LangChain 등) 의존성 없이 순수 Python으로 구현한 고성능 커스텀 Vector RAG 엔진.</p>
                 <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="tech-tag">DQN/PPO</span>
-                    <span class="tech-tag">C++ Socket</span>
-                    <span class="tech-tag">Fusion Network</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Vector DB</span>
+                    <span class="tech-tag">RAG Architecture</span>
                 </div>
-                <a href="https://github.com/JEONGHEESIK" class="mono text-xs border-b border-gray-700 pb-1">VIEW PROJECT _</a>
+                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
+            </div>
+
+            <div class="project-card p-10">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Crazy Arcade RL Agent</h3>
+                    <span class="mono text-xs text-gray-600">2024</span>
+                </div>
+                <p class="text-gray-400 mb-6 font-light">C++ 게임 서버와 Python 에이전트 간 TCP 소켓 연동 및 607차원 상태 공간 처리를 위한 Fusion 신경망 설계.</p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-tag">DQN / PPO</span>
+                    <span class="tech-tag">C++ Socket</span>
+                    <span class="tech-tag">Reward Shaping</span>
+                </div>
+                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-xs border-b border-gray-700 pb-1">GITHUB REPOSITORY _</a>
             </div>
         </div>
     </section>
 
-    <footer class="pt-20 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
-        <p class="mono text-xs text-gray-600 uppercase">© 2026 JEONGHEESIK. All Rights Reserved.</p>
-        <div class="flex space-x-8 text-gray-400 text-lg">
-            <a href="mailto:koto144@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/JEONGHEESIK"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jeongheesik/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://blog.naver.com/koto144"><i class="fas fa-blog"></i></a>
+    <footer class="pt-20 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 text-gray-500">
+        <p class="mono text-[10px] uppercase">© 2026 HEESIK JEONG. Sogang GS AI·SW.</p>
+        <div class="flex space-x-8 text-lg">
+            <a href="mailto:koto144@gmail.com" class="hover:text-white"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/JEONGHEESIK" class="hover:text-white"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jeongheesik/" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+            <a href="https://blog.naver.com/koto144" class="hover:text-white"><i class="fas fa-blog"></i></a>
         </div>
     </footer>
 
