@@ -10,12 +10,12 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #000000; color: #d1d5db; line-height: 1.5; font-size: 0.85rem; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .project-card, .exp-card { 
+        .project-card, .exp-card, .par-card { 
             background: #080808; 
             border: 1px solid #1a1a1a; 
             transition: all 0.2s ease-in-out;
         }
-        .project-card:hover, .exp-card:hover { border-color: #ffffff; background: #0f0f0f; }
+        .project-card:hover { border-color: #ffffff; background: #0f0f0f; }
         .tech-tag { background: #111; color: #9ca3af; border: 1px solid #222; padding: 1px 6px; font-size: 0.65rem; border-radius: 2px; }
         .edu-badge { border: 1px solid #333; padding: 2px 10px; border-radius: 15px; font-size: 0.7rem; color: #9ca3af; }
         h1 { font-size: 2.5rem !important; font-weight: 900 !important; color: #fff; }
@@ -23,16 +23,20 @@
         h3 { font-size: 1rem !important; color: #fff; }
         .profile-img { width: 100px; height: 100px; object-fit: cover; border: 1px solid #333; }
         
-        /* 🖨️ PDF 인쇄용 스타일 (자동 색상 반전 - 라이트모드) */
+        /* P-A-R 텍스트 스타일 */
+        .par-label { color: #666; font-weight: 800; margin-right: 4px; font-size: 0.65rem; }
+        .par-text { color: #9ca3af; font-size: 0.75rem; font-weight: 300; }
+
         @media print {
             body { background-color: #ffffff !important; color: #111827 !important; }
             * { color: #111827 !important; } 
-            .project-card, .exp-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
+            .project-card, .exp-card, .par-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
             .tech-tag { background-color: #f3f4f6 !important; border-color: #9ca3af !important; color: #374151 !important; }
             .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
             .profile-img { border-color: #e5e7eb !important; }
+            .par-label { color: #4b5563 !important; }
             .no-print { display: none !important; } 
-            footer { border-color: #e5e7eb !important; } /* PDF 인쇄 시 푸터 얇은 선 색상 조정 */
+            footer { border-color: #e5e7eb !important; }
             @page { margin: 15mm; }
             a { text-decoration: none; }
         }
@@ -43,12 +47,7 @@
     <header class="mb-12">
         <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-6">
             <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
-                <img src="https://drive.google.com/thumbnail?id=1QWbB6ZKpxY7GEKB3_wVHLWudwwrRdbgq&sz=w800" 
-                    alt="JEONGHEESIK" 
-                    class="profile-img"
-                    oncontextmenu="return false;" 
-                    ondragstart="return false;" 
-                    style="user-select: none; -webkit-user-drag: none;">
+                <img src="https://drive.google.com/thumbnail?id=1QWbB6ZKpxY7GEKB3_wVHLWudwwrRdbgq&sz=w800" alt="JEONGHEESIK" class="profile-img">
                 <div>
                     <h1 class="tracking-tighter uppercase leading-none mb-2">JEONG HEESIK</h1>
                     <div class="flex flex-wrap gap-2 items-center">
@@ -118,7 +117,7 @@
                 </div>
             </div>
             <div class="exp-card p-5 flex items-center gap-4">
-                <i class="fas fa-crosshairs text-gray-500 text-lg"></i>
+                <i class="fas fa-bolt text-gray-500 text-lg"></i>
                 <div>
                     <span class="block mono text-[10px] text-gray-600 uppercase tracking-widest mb-1">Focus</span>
                     <span class="text-gray-300 text-xs font-semibold">Embodied AI</span>
@@ -129,62 +128,92 @@
 
     <section class="mb-16">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold">/ Project Portfolio</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="uppercase tracking-tight">Agentic Graph RAG</h3>
-                        <span class="mono text-[10px] text-gray-700">2026</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8">
+            
+            <div class="flex flex-col gap-2">
+                <div class="project-card p-6 flex flex-col justify-between h-[180px]">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="uppercase tracking-tight">Agentic Graph RAG</h3>
+                            <span class="mono text-[10px] text-gray-700">2026</span>
+                        </div>
+                        <p class="text-gray-500 font-light mb-4 text-xs">질의 복잡도에 따른 3-Way 동적 라우팅 및 Quality Gate 구축.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tech-tag">LangGraph</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Weaviate</span>
+                        </div>
                     </div>
-                    <p class="text-gray-500 font-light mb-4 text-sm">질의 복잡도에 따른 3-Way 동적 라우팅 및 Observer LLM 기반 Quality Gate 구축.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">LangGraph</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Weaviate</span>
-                    </div>
+                    <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
+                <div class="par-card p-4 space-y-2">
+                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">단순 RAG의 복잡한 추론 한계 및 정보 누락 문제 발생.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">LangGraph 기반의 3-Way 라우팅 및 GraphDB 연동 구조 설계.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">답변 정확도 개선 및 Observer 모델을 통한 신뢰도 검증 확보.</span></div>
+                </div>
             </div>
 
-            <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <div class="flex justify-between items-center mb-3 text-white">
-                        <h3 class="uppercase tracking-tight">Crazy Arcade RL Agent</h3>
-                        <span class="mono text-[10px] text-gray-700">2025</span>
+            <div class="flex flex-col gap-2">
+                <div class="project-card p-6 flex flex-col justify-between h-[180px]">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="uppercase tracking-tight">Crazy Arcade RL Agent</h3>
+                            <span class="mono text-[10px] text-gray-700">2025</span>
+                        </div>
+                        <p class="text-gray-500 font-light mb-4 text-xs">실시간 대전 강화학습 및 CNN Fusion 신경망 설계.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
+                        </div>
                     </div>
-                    <p class="text-gray-500 font-light mb-4 text-sm">C++/Python TCP 소켓 연동 기반 실시간 대전 강화학습 및 CNN Fusion 신경망 설계.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
-                    </div>
+                    <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
+                <div class="par-card p-4 space-y-2">
+                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">실시간 환경의 고차원 상태 데이터 처리 및 지연 시간 문제.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">CNN Fusion 아키텍처 및 C++/Python 소켓 통신 최적화.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">자체 제작 에이전트의 승률 70% 이상 달성 및 실시간성 확보.</span></div>
+                </div>
             </div>
 
-            <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="uppercase tracking-tight">SLM Query Rewriter</h3>
-                        <span class="mono text-[10px] text-gray-700">2025</span>
+            <div class="flex flex-col gap-2">
+                <div class="project-card p-6 flex flex-col justify-between h-[180px]">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="uppercase tracking-tight">SLM Query Rewriter</h3>
+                            <span class="mono text-[10px] text-gray-700">2025</span>
+                        </div>
+                        <p class="text-gray-500 font-light mb-4 text-xs">Qwen3-0.6B 기반 DPO 파인튜닝을 통한 유의어 최적화.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tech-tag">Hugging Face</span><span class="tech-tag">PyTorch</span><span class="tech-tag">DPO</span>
+                        </div>
                     </div>
-                    <p class="text-gray-500 font-light mb-4 text-sm">Qwen3-0.6B 기반 DPO 파인튜닝을 통한 한국어 유의어 리라이팅 최적화 및 배포.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">Hugging Face</span><span class="tech-tag">PyTorch</span><span class="tech-tag">NLP</span>
-                    </div>
+                    <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
+                <div class="par-card p-4 space-y-2">
+                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">기존 RAG의 사용자 모호한 질의로 인한 검색 품질 저하.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">Qwen3-0.6B 모델에 DPO 및 DoRA 기법 적용하여 튜닝.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">검색 정확도 향상 및 저사양 환경에서도 구동 가능한 SLM 배포.</span></div>
+                </div>
             </div>
 
-            <div class="project-card p-6 flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="uppercase tracking-tight">Custom Vector RAG</h3>
-                        <span class="mono text-[10px] text-gray-700">2025</span>
+            <div class="flex flex-col gap-2">
+                <div class="project-card p-6 flex flex-col justify-between h-[180px]">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="uppercase tracking-tight">Custom Vector RAG</h3>
+                            <span class="mono text-[10px] text-gray-700">2025</span>
+                        </div>
+                        <p class="text-gray-500 font-light mb-4 text-xs">외부 프레임워크 의존성 없는 순수 Python RAG 엔진.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tech-tag">Python</span><span class="tech-tag">Vector DB</span><span class="tech-tag">Math</span>
+                        </div>
                     </div>
-                    <p class="text-gray-500 font-light mb-4 text-sm">외부 프레임워크 의존성 없이 순수 Python으로 구현한 경량화 커스텀 Vector RAG 엔진.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="tech-tag">Python</span><span class="tech-tag">Vector DB</span><span class="tech-tag">System Design</span>
-                    </div>
+                    <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mono text-[10px] text-gray-500 hover:text-white mt-4 tracking-widest uppercase no-print" target="_blank">View Repo _</a>
+                <div class="par-card p-4 space-y-2">
+                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">라이브러리 사용 시 내부 동작 원리 파악 및 커스텀의 어려움.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">순수 Python으로 임베딩, 코사인 유사도, 검색 로직 직접 구현.</span></div>
+                    <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">RAG 파이프라인의 핵심 매커니즘에 대한 완벽한 이해도 증명.</span></div>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -199,7 +228,7 @@
                 <p class="text-gray-500 font-light text-xs mb-4">AI Engineer / SLM Optimization & RAG Development</p>
                 <ul class="text-gray-500 text-xs list-disc list-inside space-y-1 font-light">
                     <li>Led the development of a Query Rewriter SLM using Qwen3-0.6B via DPO and DoRA fine-tuning.</li>
-                    <li>Designed and implemented a lightweight, custom Vector RAG architecture from scratch without relying on external frameworks.</li>
+                    <li>Designed and implemented a lightweight, custom Vector RAG architecture from scratch.</li>
                 </ul>
             </div>
             
@@ -210,9 +239,8 @@
                 </div>
                 <p class="text-gray-500 font-light text-xs mb-4">ML Engineer / Dynamic Pricing Recommendation System</p>
                 <ul class="text-gray-500 text-xs list-disc list-inside space-y-1 font-light">
-                    <li>Developed a dynamic price recommendation algorithm for the hotel's Property Management System (PMS) to optimize revenue.</li>
-                    <li>Built data pipelines to scrape competitor pricing from OTA (Online Travel Agencies) platforms and integrate historical internal data.</li>
-                    <li>Engineered features utilizing external variables including weather conditions, seasonality, and public holidays to improve pricing accuracy.</li>
+                    <li>Developed a dynamic price recommendation algorithm to optimize revenue.</li>
+                    <li>Built data pipelines to scrape competitor pricing from OTA platforms.</li>
                 </ul>
             </div>
 
@@ -222,10 +250,9 @@
                     <span class="mono text-[10px] text-gray-600 uppercase">2023.04 - 2024.07</span>
                 </div>
                 <p class="text-gray-500 font-light text-xs mb-4">Data Scientist & Developer / NLP & Backend</p>
-                <ul class="text-gray-500 text-xs list-disc list-inside space-y-2 font-light">
-                    <li>Led the end-to-end development of an NLP-based public opinion analysis platform for 46 government departments as the sole developer.</li>
-                    <li>Built automated data pipelines to scrape SNS comments, implemented sentiment analysis models, and developed the backend architecture to serve insights via Web UI.</li>
-                    <li>Spearheaded R&D for a 'Deep-tech TIPS' grant, building a prototype AI persona model by fine-tuning on influencer interview datasets.</li>
+                <ul class="text-gray-500 text-xs list-disc list-inside space-y-1 font-light">
+                    <li>Led the end-to-end development of an NLP-based public opinion analysis platform.</li>
+                    <li>Spearheaded R&D for a 'Deep-tech TIPS' grant, building prototype AI persona models.</li>
                 </ul>
             </div>
         </div>
