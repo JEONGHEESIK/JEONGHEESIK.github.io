@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineer Portfolio | JEONGHEESIK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .project-card { background: #1e293b; border-radius: 12px; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-5px); border: 1px solid #38bdf8; }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="p-6 md:p-20">
+
+    <header class="max-w-4xl mx-auto text-center mb-20">
+        <h1 class="text-5xl font-extrabold mb-4">AI Engineer, <span class="gradient-text">JEONGHEESIK</span></h1>
+        <p class="text-xl text-slate-400 leading-relaxed italic">
+            "단순히 API를 연결하는 것을 넘어, '동작하고 신뢰할 수 있는' AI 시스템을 설계합니다."
+        </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-20">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-sky-400 pl-4">🛠 Tech Stack</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 bg-slate-800 rounded-lg">
+                <h3 class="text-sky-400 font-bold mb-2">AI / ML</h3>
+                <p class="text-sm">PyTorch, LangGraph, Hugging Face, SGLang, RL (DQN, PPO)</p>
+            </div>
+            <div class="p-4 bg-slate-800 rounded-lg">
+                <h3 class="text-sky-400 font-bold mb-2">Data / Infra</h3>
+                <p class="text-sm">Weaviate, Neo4j, FAISS, Docker, FastAPI, Ollama</p>
+            </div>
+            <div class="p-4 bg-slate-800 rounded-lg">
+                <h3 class="text-sky-400 font-bold mb-2">Language</h3>
+                <p class="text-sm">Python, C++ (Socket Programming)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto mb-20">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-sky-400 pl-4 text-white">🚀 Core Projects</h2>
+
+        <div class="project-card p-8 mb-8">
+            <h3 class="text-2xl font-bold mb-2">Agentic Graph RAG Pipeline</h3>
+            <p class="text-sky-400 text-sm mb-4">LangGraph · Neo4j · SGLang</p>
+            <ul class="list-disc list-inside text-slate-300 space-y-2 mb-6">
+                <li>질의 복잡도에 따른 3-Way 동적 라우팅 시스템 도입</li>
+                <li>Observer LLM 기반 Quality Gate 및 백트래킹 메커니즘 구축</li>
+                <li>SGLang Lazy Loading을 통한 GPU 메모리 최적화</li>
+            </ul>
+            <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="text-sky-400 hover:underline">View Repository →</a>
+        </div>
+
+        <div class="project-card p-8 mb-8">
+            <h3 class="text-2xl font-bold mb-2">Query Rewriter: SLM Fine-Tuning</h3>
+            <p class="text-sky-400 text-sm mb-4">Qwen3-0.6B · DPO · DoRA</p>
+            <ul class="list-disc list-inside text-slate-300 space-y-2 mb-6">
+                <li>DPO(Direct Preference Optimization) 기반 한국어 동의어/유의어 리라이팅 학습 25303987a74d80369db5c5fadb408633.pdf]</li>
+                <li>총 23회차의 하이퍼파라미터 튜닝을 통한 성능 최적화 25303987a74d80369db5c5fadb408633.pdf]</li>
+                <li>DoRA(Rank: 32, Alpha: 64) 기법을 활용한 효율적 파인튜닝 25303987a74d80369db5c5fadb408633.pdf]</li>
+            </ul>
+            <div class="flex space-x-4">
+                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="text-sky-400 hover:underline">GitHub →</a>
+                <span class="text-slate-600">|</span>
+                <span class="text-slate-400">Deployed on Corporate Hugging Face</span>
+            </div>
+        </div>
+
+        <div class="project-card p-8 mb-8">
+            <h3 class="text-2xl font-bold mb-2">C++ Custom RL Agent</h3>
+            <p class="text-sky-400 text-sm mb-4">DQN/PPO · C++ · Socket Programming</p>
+            <ul class="list-disc list-inside text-slate-300 space-y-2 mb-6">
+                <li>C++ 서버와 Python 에이전트 간 TCP 소켓 연동 환경 구축</li>
+                <li>CNN+Linear Fusion 신경망 설계를 통한 607차원 상태 공간 처리</li>
+                <li>Reward Shaping을 통한 에이전트 IDLE 고착화 문제 해결</li>
+            </ul>
+            <a href="https://github.com/JEONGHEESIK" class="text-sky-400 hover:underline">GitHub →</a>
+        </div>
+    </section>
+
+    <footer class="max-w-4xl mx-auto text-center border-t border-slate-800 pt-10">
+        <h2 class="text-xl font-bold mb-6">Connect with me</h2>
+        <div class="flex justify-center space-x-8 text-2xl">
+            <a href="mailto:koto144@gmail.com" class="hover:text-sky-400"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/JEONGHEESIK" class="hover:text-sky-400"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jeongheesik/" class="hover:text-sky-400"><i class="fab fa-linkedin"></i></a>
+            <a href="https://blog.naver.com/koto144" class="hover:text-sky-400"><i class="fas fa-blog"></i></a>
+        </div>
+        <p class="mt-8 text-slate-500 text-sm">© 2026 HEESIK JEONG. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
