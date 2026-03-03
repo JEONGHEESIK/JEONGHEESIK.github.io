@@ -136,9 +136,9 @@
                             <h3 class="uppercase tracking-tight">Agentic Graph RAG</h3>
                             <span class="mono text-xs text-gray-700">2026</span>
                         </div>
-                        <p class="text-gray-500 font-light mb-6 text-sm">의도 분류(Tool Router) 및 MCP 연동을 통한 하이브리드 에이전트 아키텍처 구축.</p>
+                        <p class="text-gray-500 font-light mb-6 text-sm">SGLang 최적화 기반 실시간 지능형 에이전트 및 Graph RAG 아키텍처 구축.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tech-tag">LangGraph</span><span class="tech-tag">MCP</span><span class="tech-tag">SGLang</span><span class="tech-tag">Neo4j</span>
+                            <span class="tech-tag">LangGraph</span><span class="tech-tag">SGLang</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Optimization</span>
                         </div>
                     </div>
                     <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
@@ -146,15 +146,15 @@
                 <div class="par-card p-6 space-y-3">
                     <div class="flex items-start">
                         <span class="par-label mono">P:</span>
-                        <span class="par-text">기존 RAG의 복잡한 다단계 추론 한계와, 지식 검색 외의 연산(Tool) 활용이 불가능하다는 제약.</span>
+                        <span class="par-text">다단계 추론 구조 및 대규모 그래프 데이터 조회로 인한 시스템 응답 지연(Latency) 문제.</span>
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">A:</span>
-                        <span class="par-text">LLM 기반 의도 분류기(Tool Router)로 RAG와 MCP(Tool Executor)를 분기하고, Quality Gate 미달 시 지능형 백트래킹(Backtracking) 구조 설계.</span>
+                        <span class="par-text">SGLang의 Lazy Loading 및 KV 캐시 최적화 기법을 도입하고, 의도 분류 기반의 병렬 Tool Routing 파이프라인 설계.</span>
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">R:</span>
-                        <span class="par-text">단순 QA를 넘어 계산/코드 실행이 가능한 자율 에이전트로 진화했으며, SGLang 지연 로딩(Lazy Loading)으로 유휴 상태의 GPU 자원 효율성 확보.</span>
+                        <span class="par-text">복잡한 다단계 추론 질의 Latency를 기존 30초 대에서 10초 이내로 단축(약 67% 개선)하여 시스템 효율성 3배 향상, GPU 유휴 자원 관리 효율을 극대화함.</span>
                     </div>
                 </div>
             </div>
