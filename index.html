@@ -146,15 +146,15 @@
                 <div class="par-card p-6 space-y-3">
                     <div class="flex items-start">
                         <span class="par-label mono">P:</span>
-                        <span class="par-text">다단계 추론 구조 및 대규모 그래프 데이터 조회로 인한 시스템 응답 지연(Latency) 문제.</span>
+                        <span class="par-text">단순 검색 기반 RAG의 한계로 인해, 외부 도구(Tool) 활용이 필요한 복잡한 질의에서의 추론 실패 및 높은 지연 시간 발생.</span>
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">A:</span>
-                        <span class="par-text">SGLang의 Lazy Loading 및 KV 캐시 최적화 기법을 도입하고, 의도 분류 기반의 병렬 Tool Routing 파이프라인 설계.</span>
+                        <span class="par-text">LangGraph 기반 **Multi-Agent** 설계: **LLM Tool Router**를 통해 MCP 기반 도구 제어와 Graph 검색을 동적으로 분기하고, Quality Gate를 통한 자기 반성(Self-Correction) 로직 구현.</span>
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">R:</span>
-                        <span class="par-text">복잡한 다단계 추론 질의 Latency를 **기존 30초 대에서 10초 이내로 단축(약 67% 개선)**하여 시스템 효율성 3배 향상, GPU 유휴 자원 관리 효율을 극대화함.</span>
+                        <span class="par-text">자율적 도구 제어(Tool Orchestration)가 가능한 에이전트를 구축하였으며, SGLang 최적화로 Latency를 **30초 대에서 10초 이내(67% 개선)**로 단축하여 가용성 확보.</span>
                     </div>
                 </div>
             </div>
