@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* 📏 와이드 레이아웃 및 폰트 크기 보정 */
+
         body { font-family: 'Inter', sans-serif; background-color: #000000; color: #d1d5db; line-height: 1.6; font-size: 0.9rem; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .project-card, .exp-card, .par-card { 
@@ -24,7 +24,6 @@
         h3 { font-size: 1.2rem !important; color: #fff; }
         .profile-img { width: 120px; height: 120px; object-fit: cover; border: 1px solid #333; }
         
-        /* P-A-R 텍스트 스타일 최적화 */
         .par-label { color: #888; font-weight: 800; margin-right: 6px; font-size: 0.7rem; }
         .par-text { color: #a1a1aa; font-size: 0.8rem; font-weight: 300; }
 
@@ -43,7 +42,8 @@
         }
     </style>
 </head>
-<body class="p-8 md:p-20 max-w-7xl mx-auto"> <header class="mb-16">
+<body class="p-8 md:p-20 max-w-7xl mx-auto"> 
+    <header class="mb-16">
         <div class="flex flex-col md:flex-row justify-between items-start mb-10 gap-8">
             <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
                 <img src="https://drive.google.com/thumbnail?id=1QWbB6ZKpxY7GEKB3_wVHLWudwwrRdbgq&sz=w800" alt="JEONGHEESIK" class="profile-img">
@@ -219,6 +219,36 @@
                     <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">상용 프레임워크 사용 시 추상화된 내부 로직 및 세부 커스터마이징의 기술적 장벽.</span></div>
                     <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">임베딩 연산부터 코사인 유사도, Top-K 검색 로직을 Python 라이브러리로 직접 구현.</span></div>
                     <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">성능 최적화는 상용 라이브러리보다 낮았으나, RAG 시스템의 하부 레이어 매커니즘을 완벽히 내재화함.</span></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <div class="project-card p-8 flex flex-col justify-between h-[200px]">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="uppercase tracking-tight">Mamba (SSM) From Scratch</h3>
+                            <span class="mono text-xs text-gray-700">2026</span>
+                        </div>
+                        <p class="text-gray-500 font-light mb-6 text-sm">Transformer의 Attention 연산을 선형 시간 복잡도(O(N))로 대체하는 Selective SSM 바닥부터 구현.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">PyTorch</span><span class="tech-tag">SSM</span><span class="tech-tag">Architecture</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/JEONGHEESIK/Mamba-Selective-SSM" class="mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
+                </div>
+                <div class="par-card p-6 space-y-3">
+                    <div class="flex items-start">
+                        <span class="par-label mono">Why:</span>
+                        <span class="par-text">엣지 AI 환경에서 Transformer의 $O(N^2)$ 연산 병목을 극복할 대안으로 주목받는 상태 공간 모델(SSM)의 내부 원리 파악.</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="par-label mono">What:</span>
+                        <span class="par-text">Mamba 논문을 바탕으로 Selective SSM과 1D Conv가 결합된 아키텍처를 PyTorch 기반 From-scratch로 직접 구현.</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="par-label mono">Insight:</span>
+                        <span class="par-text">시퀀스 증가에 따른 선형적(O(N)) 연산량 이점을 정량 확인하였으나, In-Context Learning에서의 성능 저하 등 구조적 트레이드오프 도출.</span>
+                    </div>
                 </div>
             </div>
 
