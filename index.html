@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-
         body { font-family: 'Inter', sans-serif; background-color: #000000; color: #d1d5db; line-height: 1.6; font-size: 0.9rem; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .project-card, .exp-card, .par-card { 
@@ -65,8 +64,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-gray-900 pt-10">
             <div>
                 <p class="text-gray-400 font-light mb-6 leading-relaxed text-lg">
-                    AI Engineer passionate about **Autonomous Agents** and **Embodied AI**. 
-                    Bridging the gap between low-level system optimization and high-level architecture.
+                    AI Engineer focused on agentic systems, low-latency inference, and real-time AI architecture.
+                    Currently exploring on-device intelligence and Embodied AI through system design, optimization, and applied research.
                 </p>
                 <div class="flex flex-wrap gap-6 mono text-xs text-gray-500 uppercase tracking-wider">
                     <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5">Email</a>
@@ -119,7 +118,53 @@
                 <i class="fas fa-bolt text-gray-500 text-xl"></i>
                 <div>
                     <span class="block mono text-[10px] text-gray-600 uppercase mb-1">Focus Area</span>
-                    <span class="text-gray-300 font-semibold">Embodied AI</span>
+                    <span class="text-gray-300 font-semibold">Agentic Systems / On-Device AI / Embodied AI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Research</h2>
+        <div class="grid grid-cols-1 gap-8">
+            <div class="flex flex-col gap-3">
+                <div class="project-card p-8 flex flex-col justify-between h-[220px]">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="uppercase tracking-tight">Task-Aware Randomized SVD</h3>
+                            <span class="mono text-xs text-gray-700">2026-2027</span>
+                        </div>
+                        <p class="text-gray-500 font-light mb-6 text-sm">
+                            On-device AI research on preserving minority-critical signals under resource-constrained real-time environments.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">On-Device AI</span>
+                            <span class="tech-tag">Randomized SVD</span>
+                            <span class="tech-tag">Isaac Sim</span>
+                            <span class="tech-tag">Edge Inference</span>
+                        </div>
+                    </div>
+                    <span class="mono text-[10px] text-gray-600 tracking-widest uppercase no-print">Ongoing Thesis Research</span>
+                </div>
+                <div class="par-card p-6 space-y-3">
+                    <div class="flex items-start">
+                        <span class="par-label mono">P:</span>
+                        <span class="par-text">
+                            Conventional PCA/SVD-based compression tends to preserve dominant variance, which may cause rare but safety-critical signals to be diluted in low-dimensional representations under real-time on-device settings.
+                        </span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="par-label mono">A:</span>
+                        <span class="par-text">
+                            Designing a Task-Aware Randomized SVD architecture that incorporates task-sensitive weighting into randomized low-rank projection. The study is being structured around Isaac Sim-based scenarios with corner cases such as sudden obstacles and unstable control conditions.
+                        </span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="par-label mono">R:</span>
+                        <span class="par-text">
+                            Currently in progress. The goal is to verify whether minority-critical signal preservation can be improved while maintaining low latency and manageable memory usage in resource-constrained on-device environments.
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,11 +195,11 @@
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">A:</span>
-                        <span class="par-text">**LLM Tool Router**를 통해 MCP 기반 도구 제어와 Graph 검색을 동적으로 분기하고, Quality Gate를 통한 자기 반성(Self-Correction) 로직 구현.</span>
+                        <span class="par-text"><strong>LLM Tool Router</strong>를 통해 MCP 기반 도구 제어와 Graph 검색을 동적으로 분기하고, Quality Gate를 통한 자기 반성(Self-Correction) 로직 구현.</span>
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">R:</span>
-                        <span class="par-text">자율적 도구 제어(Tool Orchestration)가 가능한 에이전트를 구축하였으며, SGLang 최적화로 Latency를 **30초 대에서 10초 이내(67% 개선)**로 단축하여 가용성 확보.</span>
+                        <span class="par-text">자율적 도구 제어(Tool Orchestration)가 가능한 에이전트를 구축하였으며, SGLang 최적화로 Latency를 <strong>30초 대에서 10초 이내(67% 개선)</strong>로 단축하여 가용성 확보.</span>
                     </div>
                 </div>
             </div>
@@ -239,7 +284,7 @@
                 <div class="par-card p-6 space-y-3">
                     <div class="flex items-start">
                         <span class="par-label mono">Why:</span>
-                        <span class="par-text">Transformer의 $O(N^2)$ 연산 병목을 극복할 대안으로 주목받는 상태 공간 모델(SSM)의 내부 원리 파악.</span>
+                        <span class="par-text">Transformer의 O(N²) 연산 병목을 극복할 대안으로 주목받는 상태 공간 모델(SSM)의 내부 원리 파악.</span>
                     </div>
                     <div class="flex items-start">
                         <span class="par-label mono">What:</span>
@@ -263,10 +308,11 @@
                     <h3 class="font-bold text-white uppercase tracking-tight text-xl">NEXTITS</h3>
                     <span class="mono text-xs text-gray-600 uppercase">2025.03 - Present</span>
                 </div>
-                <p class="text-gray-500 font-light text-sm mb-6 uppercase">AI Engineer / SLM Optimization & RAG Development</p>
+                <p class="text-gray-500 font-light text-sm mb-6 uppercase">AI Engineer / Agentic RAG, SLM Optimization & Low-Latency Inference</p>
                 <ul class="text-gray-500 text-sm list-disc list-inside space-y-2 font-light">
-                    <li>Led the development of a Query Rewriter SLM using Qwen3-0.6B via DPO and DoRA fine-tuning.</li>
-                    <li>Designed and implemented a lightweight, custom Vector RAG architecture from scratch.</li>
+                    <li>Designed an agentic Graph RAG architecture with dynamic tool routing, graph retrieval, and self-correction logic using LangGraph and MCP-based tools.</li>
+                    <li>Fine-tuned a Korean Query Rewriter SLM based on Qwen 0.6B using DPO and DoRA for retrieval-oriented rewriting in on-premise environments.</li>
+                    <li>Optimized LLM serving with SGLang and infrastructure tuning, reducing inference latency from around 30 seconds to under 10 seconds.</li>
                 </ul>
             </div>
             
@@ -300,7 +346,7 @@
         <p>© 2026 JEONGHEESIK.</p>
         <div class="flex items-center">
             <a href="https://jeongheesik.github.io" target="_blank" class="text-gray-200 font-bold border-b border-gray-500 pb-0.5 flex items-center gap-2">
-                        <i class="fas fa-globe text-[10px]"></i> web portfolio
+                <i class="fas fa-globe text-[10px]"></i> web portfolio
             </a>
         </div>
     </footer>
