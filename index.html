@@ -1,47 +1,65 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineer | JEONGHEESIK</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #d1d5db; line-height: 1.6; font-size: 0.9rem; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .project-card, .exp-card, .par-card { 
-            background: #080808; 
-            border: 1px solid #1a1a1a; 
-            transition: all 0.2s ease-in-out;
-        }
-        .project-card:hover { border-color: #ffffff; background: #0f0f0f; }
-        .tech-tag { background: #111; color: #9ca3af; border: 1px solid #222; padding: 2px 8px; font-size: 0.7rem; border-radius: 4px; }
-        .edu-badge { border: 1px solid #333; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; color: #9ca3af; }
-        h1 { font-size: 3rem !important; font-weight: 900 !important; color: #fff; }
-        h2 { font-size: 0.8rem !important; }
-        h3 { font-size: 1.2rem !important; color: #fff; }
-        .profile-img { width: 120px; height: 120px; object-fit: cover; border: 1px solid #333; }
-        
-        .par-label { color: #888; font-weight: 800; margin-right: 6px; font-size: 0.7rem; }
-        .par-text { color: #a1a1aa; font-size: 0.8rem; font-weight: 300; }
+---
+layout: default
+title: Portfolio
+---
+<script>
+    tailwind.config = { corePlugins: { preflight: false } }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+    /* Reset some basic elements inside the portfolio wrapper to ensure Tailwind classes work similarly without preflight */
+    #portfolio-wrapper { font-family: 'Inter', sans-serif; color: #d1d5db; line-height: 1.6; font-size: 0.9rem; }
+    #portfolio-wrapper * { box-sizing: border-box; }
+    #portfolio-wrapper h1, #portfolio-wrapper h2, #portfolio-wrapper h3, #portfolio-wrapper p, #portfolio-wrapper ul { margin: 0; padding: 0; }
+    #portfolio-wrapper a { text-decoration: none; color: inherit; }
+    #portfolio-wrapper ul { list-style: none; }
+    #portfolio-wrapper button { background: none; border: none; padding: 0; cursor: pointer; }
 
-        @media print {
-            body { background-color: #ffffff !important; color: #111827 !important; }
-            * { color: #111827 !important; } 
-            .project-card, .exp-card, .par-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
-            .tech-tag { background-color: #f3f4f6 !important; border-color: #9ca3af !important; color: #374151 !important; }
-            .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
-            .profile-img { border-color: #e5e7eb !important; }
-            .par-label { color: #4b5563 !important; }
-            .no-print { display: none !important; } 
-            footer { border-color: #e5e7eb !important; }
-            @page { margin: 15mm; }
-            a { text-decoration: none; }
-        }
-    </style>
-</head>
-<body class="p-8 md:p-20 max-w-7xl mx-auto"> 
+    #portfolio-wrapper .mono { font-family: 'JetBrains Mono', monospace; }
+    #portfolio-wrapper .project-card, #portfolio-wrapper .exp-card, #portfolio-wrapper .par-card { 
+        background: #080808; 
+        border: 1px solid #1a1a1a; 
+        transition: all 0.2s ease-in-out;
+    }
+    #portfolio-wrapper .project-card:hover { border-color: #ffffff; background: #0f0f0f; }
+    #portfolio-wrapper .tech-tag { background: #111; color: #9ca3af; border: 1px solid #222; padding: 2px 8px; font-size: 0.7rem; border-radius: 4px; }
+    #portfolio-wrapper .edu-badge { border: 1px solid #333; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; color: #9ca3af; }
+    #portfolio-wrapper h1 { font-size: 3rem !important; font-weight: 900 !important; color: #fff; }
+    #portfolio-wrapper h2 { font-size: 0.8rem !important; margin-bottom: 2rem !important; }
+    #portfolio-wrapper h3 { font-size: 1.2rem !important; color: #fff; }
+    #portfolio-wrapper p { margin-bottom: 1.5rem !important; }
+    #portfolio-wrapper .profile-img { width: 120px; height: 120px; object-fit: cover; border: 1px solid #333; border-radius: 0; }
+    
+    #portfolio-wrapper .par-label { color: #888; font-weight: 800; margin-right: 6px; font-size: 0.7rem; }
+    #portfolio-wrapper .par-text { color: #a1a1aa; font-size: 0.8rem; font-weight: 300; }
+
+    /* Override Chirpy's main wrapper restrictions to let the portfolio breathe */
+    #main-wrapper { padding-top: 0 !important; }
+    #main { padding-left: 0 !important; padding-right: 0 !important; }
+    #main > .row { max-width: 100% !important; margin: 0 !important; width: 100%; }
+    #core-wrapper { width: 100% !important; padding-left: 0; padding-right: 0; }
+
+    /* Sidebar hide toggle logic */
+    body.hide-sidebar #sidebar { display: none !important; }
+    body.hide-sidebar #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
+
+    @media print {
+        body { background-color: #ffffff !important; color: #111827 !important; }
+        * { color: #111827 !important; } 
+        #portfolio-wrapper .project-card, #portfolio-wrapper .exp-card, #portfolio-wrapper .par-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
+        #portfolio-wrapper .tech-tag { background-color: #f3f4f6 !important; border-color: #9ca3af !important; color: #374151 !important; }
+        #portfolio-wrapper .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
+        #portfolio-wrapper .profile-img { border-color: #e5e7eb !important; }
+        #portfolio-wrapper .par-label { color: #4b5563 !important; }
+        .no-print, #sidebar, #topbar-wrapper, #tail-wrapper { display: none !important; } 
+        footer { border-color: #e5e7eb !important; }
+        #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
+        @page { margin: 15mm; }
+    }
+</style>
+
+<div id="portfolio-wrapper" class="p-8 md:p-20 max-w-7xl mx-auto"> 
     <header class="mb-16">
         <div class="flex flex-col md:flex-row justify-between items-start mb-10 gap-8">
             <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
@@ -50,6 +68,9 @@
                     <h1 class="tracking-tighter uppercase leading-none mb-3">JEONG HEESIK</h1>
                     <div class="flex flex-wrap gap-3 items-center">
                         <span class="edu-badge mono uppercase text-white">Sogang Univ. GS AI·SW (AI·DS)</span>
+                        <button onclick="document.body.classList.toggle('hide-sidebar');" class="no-print mono text-[11px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-3 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
+                            <i class="fas fa-columns"></i> Toggle Sidebar
+                        </button>
                         <button onclick="window.print()" class="no-print mono text-[11px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-3 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
                             <i class="fas fa-file-pdf"></i> Save as PDF
                         </button>
@@ -67,15 +88,9 @@
                     AI Engineer with strengths in model optimization, low-latency inference, and architecture design for applied AI systems.
                     Currently exploring on-device intelligence and Embodied AI through applied research and system design.
                 </p>
-                <div class="flex items-center gap-4 mb-3">
-                    <button onclick="document.getElementById('links-container').classList.toggle('hidden');" class="no-print text-gray-500 hover:text-white mono text-xs border border-gray-800 px-2 py-0.5 rounded transition-colors uppercase tracking-widest">
-                        Toggle Links
-                    </button>
-                </div>
-                <div id="links-container" class="flex flex-wrap gap-6 mono text-xs text-gray-500 uppercase tracking-wider">
+                <div class="flex flex-wrap gap-6 mono text-xs text-gray-500 uppercase tracking-wider">
                     <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5">Email</a>
                     <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white pb-0.5">Github</a>
-                    <a href="/blog/" class="hover:text-white pb-0.5">Tech Blog</a>
                     <a href="https://blog.naver.com/koto144" target="_blank" class="hover:text-white pb-0.5">Naver Blog</a>
                     <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white pb-0.5">Linkedin</a>
                     <a href="https://instagram.com/25thonmay" target="_blank" class="hover:text-white pb-0.5">Instagram</a>
@@ -348,14 +363,7 @@
         </div>
     </section>
 
-    <footer class="mt-20 pt-10 border-t border-gray-900 flex justify-between items-center text-gray-600 mono text-xs uppercase tracking-[0.2em]">
+    <footer class="mt-20 pt-10 flex justify-between items-center text-gray-600 mono text-xs uppercase tracking-[0.2em] no-print">
         <p>© 2026 JEONGHEESIK.</p>
-        <div class="flex items-center">
-            <a href="https://jeongheesik.github.io" target="_blank" class="text-gray-200 font-bold border-b border-gray-500 pb-0.5 flex items-center gap-2">
-                <i class="fas fa-globe text-[10px]"></i> web portfolio
-            </a>
-        </div>
     </footer>
-
-</body>
-</html>
+</div>
