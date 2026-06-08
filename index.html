@@ -90,6 +90,16 @@ title: Portfolio
                 icon.classList.add('fa-chevron-left');
             }
         }
+
+        // Dynamically rename 'Home' tab to 'Portfolio'
+        document.addEventListener('DOMContentLoaded', () => {
+            const homeTabs = document.querySelectorAll('.nav-item a[href="/"] span, .nav-item a[href="/JEONGHEESIK.github.io/"] span');
+            homeTabs.forEach(tab => {
+                if (tab.innerText === '홈' || tab.innerText === 'HOME') {
+                    tab.innerText = 'PORTFOLIO';
+                }
+            });
+        });
     </script>
 
     <header class="mb-16">
