@@ -6,19 +6,17 @@ comments: false
 toc: true
 ---
 
-# [**JEONG HEESIK**](https://jeongheesik.github.io)       
-안녕하세요, 정희식입니다.       
-**AI Engineer**로서 모델 최적화, 저지연 추론, 에이전틱 시스템 아키텍처 설계에 강점을 두고 있습니다.
-최근에는 On-Device AI 및 Embodied AI 분야를 주로 탐구하고 있습니다.
+# **JEONG HEESIK**
 
-제 전체 이력과 진행했던 프로젝트(포트폴리오)는 메인 페이지에서 확인하실 수 있습니다.
-➔ [**메인 포트폴리오 페이지로 가기**](https://jeongheesik.github.io)
+문제 해결에 최적화된 알고리즘을 설계하고, 효율적인 솔루션을 주도적으로 개발하는 **AI Engineer**입니다.
+복잡한 알고리즘과 딥러닝 모델의 내부 로직을 세밀하게 제어하여 최적의 성능을 이끌어내는 데 중점을 둡니다.
+현재는 Agentic Systems과 더불어 실환경 문제 해결을 위한 On-Device AI 및 Embodied AI 분야를 깊이 있게 연구하고 있습니다.
 
 <br>
 
 ## <u>Information</u>
 - **Current Role**: AI Engineer @ NEXTITS
-- **Focus Area**: Agentic Systems / On-Device AI / Embodied AI
+- **Focus Area**: AI Algorithm Design / Agentic Systems / On-Device AI / Embodied AI
 
 <i class="fas fa-envelope fa-fw"></i> koto144@gmail.com
 <br>
@@ -26,7 +24,7 @@ toc: true
 
 <br>
 
-## <u>Working</u>
+## <u>Career</u>
 - **NEXTITS** | 2025.03 - Present       
   ➔ AI Engineer
 
