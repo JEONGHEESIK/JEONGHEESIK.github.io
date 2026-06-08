@@ -6,42 +6,168 @@ title: Portfolio
     tailwind.config = { corePlugins: { preflight: false } }
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap"
+    rel="stylesheet">
 <style>
     /* Reset some basic elements inside the portfolio wrapper to ensure Tailwind classes work similarly without preflight */
-    #portfolio-wrapper { font-family: 'Inter', sans-serif; color: #d1d5db; line-height: 1.6; font-size: 0.9rem; }
-    #portfolio-wrapper * { box-sizing: border-box; }
-    #portfolio-wrapper h1, #portfolio-wrapper h2, #portfolio-wrapper h3, #portfolio-wrapper p, #portfolio-wrapper ul { margin: 0; padding: 0; }
-    #portfolio-wrapper a { text-decoration: none; color: inherit; }
-    #portfolio-wrapper ul { list-style: none; }
-    #portfolio-wrapper button { background: none; border: none; padding: 0; cursor: pointer; }
-    #portfolio-wrapper .mono { font-family: 'JetBrains Mono', monospace; }
-    #portfolio-wrapper .project-card, #portfolio-wrapper .exp-card, #portfolio-wrapper .par-card { 
-        background: #080808; 
-        border: 1px solid #1a1a1a; 
+    #portfolio-wrapper {
+        font-family: 'Inter', sans-serif;
+        color: #d1d5db;
+        line-height: 1.6;
+        font-size: 0.9rem;
+    }
+
+    #portfolio-wrapper * {
+        box-sizing: border-box;
+    }
+
+    #portfolio-wrapper h1,
+    #portfolio-wrapper h2,
+    #portfolio-wrapper h3,
+    #portfolio-wrapper p,
+    #portfolio-wrapper ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #portfolio-wrapper a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #portfolio-wrapper ul {
+        list-style: none;
+    }
+
+    #portfolio-wrapper button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    #portfolio-wrapper .mono {
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    #portfolio-wrapper .project-card,
+    #portfolio-wrapper .exp-card,
+    #portfolio-wrapper .par-card {
+        background: #080808;
+        border: 1px solid #1a1a1a;
         transition: all 0.2s ease-in-out;
     }
-    #portfolio-wrapper .project-card:hover, #portfolio-wrapper .exp-card:hover { border-color: #ffffff; background: #0f0f0f; }
-    #portfolio-wrapper .tech-tag { background: #111; color: #9ca3af; border: 1px solid #222; padding: 2px 8px; font-size: 0.7rem; border-radius: 4px; }
-    #portfolio-wrapper .edu-badge { border: 1px solid #333; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; color: #9ca3af; }
-    #portfolio-wrapper h1 { font-size: 3rem !important; font-weight: 900 !important; color: #fff; }
-    #portfolio-wrapper h2 { font-size: 0.8rem !important; margin-bottom: 2rem !important; }
-    #portfolio-wrapper h3 { font-size: 1.2rem !important; color: #fff; }
-    #portfolio-wrapper p { margin-bottom: 1.5rem !important; }
-    #portfolio-wrapper .profile-img { width: 120px; height: 120px; object-fit: cover; border: 1px solid #333; border-radius: 0; }
-    #portfolio-wrapper .par-label { color: #888; font-weight: 800; margin-right: 6px; font-size: 0.7rem; }
-    #portfolio-wrapper .par-text { color: #a1a1aa; font-size: 0.8rem; font-weight: 300; }
-    #portfolio-wrapper .badge-outline { border: 1px solid #4b5563; color: #9ca3af; padding: 1px 6px; font-size: 0.6rem; border-radius: 12px; }
+
+    #portfolio-wrapper .project-card:hover,
+    #portfolio-wrapper .exp-card:hover {
+        border-color: #ffffff;
+        background: #0f0f0f;
+    }
+
+    #portfolio-wrapper .tech-tag {
+        background: #111;
+        color: #9ca3af;
+        border: 1px solid #222;
+        padding: 2px 8px;
+        font-size: 0.7rem;
+        border-radius: 4px;
+    }
+
+    #portfolio-wrapper .edu-badge {
+        border: 1px solid #333;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        color: #9ca3af;
+    }
+
+    #portfolio-wrapper h1 {
+        font-size: 3rem !important;
+        font-weight: 900 !important;
+        color: #fff;
+    }
+
+    #portfolio-wrapper h2 {
+        font-size: 0.8rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    #portfolio-wrapper h3 {
+        font-size: 1.2rem !important;
+        color: #fff;
+    }
+
+    #portfolio-wrapper p {
+        margin-bottom: 1.5rem !important;
+    }
+
+    #portfolio-wrapper .profile-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 1px solid #333;
+        border-radius: 0;
+    }
+
+    #portfolio-wrapper .par-label {
+        color: #888;
+        font-weight: 800;
+        margin-right: 6px;
+        font-size: 0.7rem;
+    }
+
+    #portfolio-wrapper .par-text {
+        color: #a1a1aa;
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+
+    #portfolio-wrapper .badge-outline {
+        border: 1px solid #4b5563;
+        color: #9ca3af;
+        padding: 1px 6px;
+        font-size: 0.6rem;
+        border-radius: 12px;
+    }
+
     /* Override Chirpy's main wrapper restrictions to let the portfolio breathe */
-    #main-wrapper { padding-top: 0 !important; }
-    #main { padding-left: 0 !important; padding-right: 0 !important; }
-    #main > .row { max-width: 100% !important; margin: 0 !important; width: 100%; }
-    #core-wrapper { width: 100% !important; padding-left: 0; padding-right: 0; }
+    #main-wrapper {
+        padding-top: 0 !important;
+    }
+
+    #main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #main>.row {
+        max-width: 100% !important;
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    #core-wrapper {
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     /* Sidebar hide toggle logic */
-    body.hide-sidebar #sidebar { display: none !important; }
-    body.hide-sidebar #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
+    body.hide-sidebar #sidebar {
+        display: none !important;
+    }
+
+    body.hide-sidebar #main-wrapper {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
     /* Light Mode Overrides */
-    html[data-mode="light"] #portfolio-wrapper { color: #4b5563; }
+    html[data-mode="light"] #portfolio-wrapper {
+        color: #4b5563;
+    }
+
     html[data-mode="light"] #portfolio-wrapper .project-card,
     html[data-mode="light"] #portfolio-wrapper .exp-card,
     html[data-mode="light"] #portfolio-wrapper .par-card {
@@ -49,70 +175,180 @@ title: Portfolio
         border-color: #e5e7eb;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
+
     html[data-mode="light"] #portfolio-wrapper .project-card:hover,
     html[data-mode="light"] #portfolio-wrapper .exp-card:hover {
         background: #f9fafb;
         border-color: #9ca3af;
     }
+
     html[data-mode="light"] #portfolio-wrapper .tech-tag {
         background: #f3f4f6;
         color: #4b5563;
         border-color: #d1d5db;
     }
+
     html[data-mode="light"] #portfolio-wrapper .edu-badge {
         color: #111827 !important;
         border-color: #6b7280;
     }
+
     html[data-mode="light"] #portfolio-wrapper h1,
     html[data-mode="light"] #portfolio-wrapper h3 {
         color: #111827 !important;
     }
-    html[data-mode="light"] #portfolio-wrapper .par-label { color: #4b5563; }
-    html[data-mode="light"] #portfolio-wrapper .par-text { color: #374151; }
-    html[data-mode="light"] #portfolio-wrapper .badge-outline { color: #6b7280; border-color: #d1d5db; }
+
+    html[data-mode="light"] #portfolio-wrapper .par-label {
+        color: #4b5563;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .par-text {
+        color: #374151;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .badge-outline {
+        color: #6b7280;
+        border-color: #d1d5db;
+    }
+
     /* Tailwind Color Overrides for Light Mode */
-    html[data-mode="light"] #portfolio-wrapper .text-white { color: #111827 !important; }
-    html[data-mode="light"] #portfolio-wrapper .text-gray-200 { color: #1f2937 !important; }
-    html[data-mode="light"] #portfolio-wrapper .text-gray-300 { color: #374151 !important; }
-    html[data-mode="light"] #portfolio-wrapper .text-gray-400 { color: #4b5563 !important; }
-    html[data-mode="light"] #portfolio-wrapper .text-gray-500 { color: #6b7280 !important; }
-    html[data-mode="light"] #portfolio-wrapper .text-gray-600 { color: #9ca3af !important; }
-    html[data-mode="light"] #portfolio-wrapper .text-gray-700 { color: #d1d5db !important; }
-    html[data-mode="light"] #portfolio-wrapper .border-gray-900 { border-color: #e5e7eb !important; }
-    html[data-mode="light"] #portfolio-wrapper .border-gray-800 { border-color: #d1d5db !important; }
-    html[data-mode="light"] #portfolio-wrapper .border-gray-700 { border-color: #9ca3af !important; }
-    html[data-mode="light"] #portfolio-wrapper .hover\:text-white:hover { color: #111827 !important; }
-    html[data-mode="light"] #portfolio-wrapper .hover\:border-white:hover { border-color: #111827 !important; }
-    html[data-mode="light"] #sidebar-toggle { background: #ffffff !important; border-color: #d1d5db !important; color: #4b5563 !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-white {
+        color: #111827 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-200 {
+        color: #1f2937 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-300 {
+        color: #374151 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-400 {
+        color: #4b5563 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-500 {
+        color: #6b7280 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-600 {
+        color: #9ca3af !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-700 {
+        color: #d1d5db !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .border-gray-900 {
+        border-color: #e5e7eb !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .border-gray-800 {
+        border-color: #d1d5db !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .border-gray-700 {
+        border-color: #9ca3af !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .hover\:text-white:hover {
+        color: #111827 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .hover\:border-white:hover {
+        border-color: #111827 !important;
+    }
+
+    html[data-mode="light"] #sidebar-toggle {
+        background: #ffffff !important;
+        border-color: #d1d5db !important;
+        color: #4b5563 !important;
+    }
+
     /* Floating Sidebar Toggle Button */
     #sidebar-toggle {
         top: 20px;
-        left: 215px; /* Positioned at the top right of the 260px sidebar */
+        left: 215px;
+        /* Positioned at the top right of the 260px sidebar */
     }
+
     body.hide-sidebar #sidebar-toggle {
-        left: 20px; /* Moves to the left edge when sidebar is hidden */
+        left: 20px;
+        /* Moves to the left edge when sidebar is hidden */
     }
+
     @media (max-width: 849px) {
+
         /* Hide our custom toggle on mobile since Chirpy has its own topbar hamburger */
-        #sidebar-toggle { display: none !important; }
+        #sidebar-toggle {
+            display: none !important;
+        }
     }
+
     @media print {
-        body { background-color: #ffffff !important; color: #111827 !important; }
-        * { color: #111827 !important; } 
-        #portfolio-wrapper .project-card, #portfolio-wrapper .exp-card, #portfolio-wrapper .par-card { background-color: #ffffff !important; border-color: #d1d5db !important; break-inside: avoid; }
-        #portfolio-wrapper .tech-tag { background-color: #f3f4f6 !important; border-color: #9ca3af !important; color: #374151 !important; }
-        #portfolio-wrapper .edu-badge { border-color: #6b7280 !important; color: #111827 !important; }
-        #portfolio-wrapper .profile-img { border-color: #e5e7eb !important; }
-        #portfolio-wrapper .par-label { color: #4b5563 !important; }
-        .no-print, #sidebar, #topbar-wrapper, #tail-wrapper { display: none !important; } 
-        footer { border-color: #e5e7eb !important; }
-        #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
-        @page { margin: 15mm; }
+        body {
+            background-color: #ffffff !important;
+            color: #111827 !important;
+        }
+
+        * {
+            color: #111827 !important;
+        }
+
+        #portfolio-wrapper .project-card,
+        #portfolio-wrapper .exp-card,
+        #portfolio-wrapper .par-card {
+            background-color: #ffffff !important;
+            border-color: #d1d5db !important;
+            break-inside: avoid;
+        }
+
+        #portfolio-wrapper .tech-tag {
+            background-color: #f3f4f6 !important;
+            border-color: #9ca3af !important;
+            color: #374151 !important;
+        }
+
+        #portfolio-wrapper .edu-badge {
+            border-color: #6b7280 !important;
+            color: #111827 !important;
+        }
+
+        #portfolio-wrapper .profile-img {
+            border-color: #e5e7eb !important;
+        }
+
+        #portfolio-wrapper .par-label {
+            color: #4b5563 !important;
+        }
+
+        .no-print,
+        #sidebar,
+        #topbar-wrapper,
+        #tail-wrapper {
+            display: none !important;
+        }
+
+        footer {
+            border-color: #e5e7eb !important;
+        }
+
+        #main-wrapper {
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+        }
+
+        @page {
+            margin: 15mm;
+        }
     }
 </style>
-<div id="portfolio-wrapper" class="p-8 md:p-20 max-w-7xl mx-auto"> 
+<div id="portfolio-wrapper" class="p-8 md:p-20 max-w-7xl mx-auto">
     <!-- Floating Toggle Button -->
-    <button id="sidebar-toggle" onclick="toggleSidebar()" class="no-print fixed z-[9999] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 bg-[#080808] border border-gray-800 rounded hover:border-gray-500 cursor-pointer" style="width: 28px; height: 28px;">
+    <button id="sidebar-toggle" onclick="toggleSidebar()"
+        class="no-print fixed z-[9999] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 bg-[#080808] border border-gray-800 rounded hover:border-gray-500 cursor-pointer"
+        style="width: 28px; height: 28px;">
         <i class="fas fa-chevron-left text-[10px]"></i>
     </button>
     <script>
@@ -140,12 +376,14 @@ title: Portfolio
     <header class="mb-16">
         <div class="flex flex-col md:flex-row justify-between items-start mb-10 gap-8">
             <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
-                <img src="https://drive.google.com/thumbnail?id=1QWbB6ZKpxY7GEKB3_wVHLWudwwrRdbgq&sz=w800" alt="JEONGHEESIK" class="profile-img">
+                <img src="https://drive.google.com/thumbnail?id=1QWbB6ZKpxY7GEKB3_wVHLWudwwrRdbgq&sz=w800"
+                    alt="JEONGHEESIK" class="profile-img">
                 <div>
                     <h1 class="tracking-tighter uppercase leading-none mb-3">JEONG HEESIK</h1>
                     <div class="flex flex-wrap gap-3 items-center">
                         <span class="edu-badge mono uppercase text-white">Sogang Univ. GS AI·SW (AI·DS)</span>
-                        <button onclick="window.print()" class="no-print mono text-[11px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-3 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
+                        <button onclick="window.print()"
+                            class="no-print mono text-[11px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-3 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
                             <i class="fas fa-file-pdf"></i> Save as PDF
                         </button>
                     </div>
@@ -153,15 +391,20 @@ title: Portfolio
             </div>
             <div class="flex flex-col items-start md:items-end gap-1 text-right">
                 <span class="text-[11px] mono text-gray-600 uppercase tracking-widest block">AI Engineer</span>
-                <span class="text-[11px] mono text-gray-600 uppercase tracking-widest block">Last updated 2026.06.08</span>
+                <span class="text-[11px] mono text-gray-600 uppercase tracking-widest block">Last updated
+                    2026.06.08</span>
             </div>
         </div>
         <div class="grid grid-cols-1 border-t border-gray-900 pt-10">
             <div class="flex flex-wrap gap-6 mono text-xs text-gray-500 uppercase tracking-wider mb-6">
-                <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white pb-0.5"><i class="fab fa-github"></i> Github</a>
-                <a href="https://blog.naver.com/koto144" target="_blank" class="hover:text-white pb-0.5"><i class="fas fa-blog"></i> Blog</a>
-                <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white pb-0.5"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5"><i class="fas fa-envelope"></i>
+                    Email</a>
+                <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white pb-0.5"><i
+                        class="fab fa-github"></i> Github</a>
+                <a href="https://blog.naver.com/koto144" target="_blank" class="hover:text-white pb-0.5"><i
+                        class="fas fa-blog"></i> Blog</a>
+                <a href="https://www.linkedin.com/in/jeongheesik/" target="_blank" class="hover:text-white pb-0.5"><i
+                        class="fab fa-linkedin"></i> Linkedin</a>
             </div>
         </div>
     </header>
@@ -171,12 +414,15 @@ title: Portfolio
         <div class="exp-card p-8 border-l-2 border-gray-800">
             <p class="text-gray-300 font-light mb-6 leading-relaxed text-sm">
                 <strong class="text-white text-lg block mb-2">문제 해결에 최적화된 알고리즘을 설계하고, 효율적인 솔루션을 개발합니다.</strong>
-                <span class="text-gray-500 block mb-4">#algorithm #modeling #deeplearning #agentic_system #optimization #ENTJ</span>
-                AI 엔지니어로서 비전, 자연어, 에이전트 시스템 등 다양한 도메인의 데이터를 분석하고, 최적의 알고리즘과 모델 아키텍처를 설계합니다. 기존 프레임워크나 모델에 얽매이지 않고, 주어진 문제에 맞춰 내부 로직을 세밀하게 튜닝하거나 새로운 구조를 구현하여 실질적인 솔루션을 만들어내는 데 집중합니다.
+                <span class="text-gray-500 block mb-4">#algorithm #modeling #deeplearning #agentic_system #optimization
+                    #ENTJ</span>
+                AI 엔지니어로서 비전, 자연어, 에이전트 시스템 등 다양한 도메인의 데이터를 분석하고, 최적의 알고리즘과 모델 아키텍처를 설계합니다. 기존 프레임워크나 모델에 얽매이지 않고, 주어진
+                문제에 맞춰 내부 로직을 세밀하게 튜닝하거나 새로운 구조를 구현하여 실질적인 솔루션을 만들어내는 데 집중합니다.
             </p>
             <p class="text-gray-400 font-light leading-relaxed text-sm">
                 <strong>동료들과 함께 명확한 목표를 공유하고 협업할 때 가장 큰 시너지를 냅니다.</strong><br>
-                복잡한 알고리즘이나 모델의 원리를 다른 직무의 동료들도 직관적으로 이해할 수 있도록 쉽게 풀어 설명하는 소통을 중요하게 생각합니다. 이 과정을 통해 스스로도 개념을 깊이 이해하게 되며, 기술을 단순한 연구로 남기지 않고 실제 서비스의 문제를 해결하는 데 적용하는 것을 목표로 합니다.
+                복잡한 알고리즘이나 모델의 원리를 다른 직무의 동료들도 직관적으로 이해할 수 있도록 쉽게 풀어 설명하는 소통을 중요하게 생각합니다. 이 과정을 통해 스스로도 개념을 깊이 이해하게 되며,
+                기술을 단순한 연구로 남기지 않고 실제 서비스의 문제를 해결하는 데 적용하는 것을 목표로 합니다.
             </p>
         </div>
     </section>
@@ -221,7 +467,8 @@ title: Portfolio
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Education & Publications</h2>
         <div class="exp-card p-8 border-l-2 border-gray-800 mb-6">
             <div class="flex justify-between items-start mb-4">
-                <h3 class="font-bold text-white uppercase tracking-tight text-lg">서강대학교 AI·SW대학원 인공지능데이터사이언스학과 (AI·DS)</h3>
+                <h3 class="font-bold text-white uppercase tracking-tight text-lg">서강대학교 AI·SW대학원 인공지능데이터사이언스학과 (AI·DS)
+                </h3>
                 <span class="mono text-xs text-gray-600 uppercase">2025.02 - Present</span>
             </div>
             <p class="text-gray-400 font-medium text-sm mb-4">석사 과정 (Master's Student)</p>
@@ -235,13 +482,16 @@ title: Portfolio
             </div>
         </div>
         <div class="exp-card p-8 border-l-2 border-gray-800">
-            <h3 class="font-bold text-white uppercase tracking-tight text-lg mb-4">Master's Thesis (Ongoing Research)</h3>
+            <h3 class="font-bold text-white uppercase tracking-tight text-lg mb-4">Master's Thesis (Ongoing Research)
+            </h3>
             <div class="mb-4">
                 <strong class="text-gray-300 text-md">Task-Aware Randomized SVD (가제)</strong><br>
-                <span class="text-gray-500 text-sm block mt-1">실시간 On-Device/엣지 AI 환경에서 핵심 소수 데이터의 정보 손실 방지를 위한 고속 차원 축소 및 추론 방법론</span>
+                <span class="text-gray-500 text-sm block mt-1">실시간 On-Device/엣지 AI 환경에서 핵심 소수 데이터의 정보 손실 방지를 위한 고속 차원 축소
+                    및 추론 방법론</span>
             </div>
             <div class="text-gray-400 font-light text-sm space-y-2">
-                <p>기존 PCA/SVD 계열 차원 축소는 전체 분산(Variance) 중심으로 압축하여, 빈도는 낮으나 치명적으로 중요한 이상 신호(Critical Minority Data)가 저차원 표현에서 희석되는 한계가 존재합니다. 본 연구는 이러한 문제를 해결하여 핵심 소수 신호를 보존하는 알고리즘을 목표로 진행 중입니다.</p>
+                <p>기존 PCA/SVD 계열 차원 축소는 전체 분산(Variance) 중심으로 압축하여, 빈도는 낮으나 치명적으로 중요한 이상 신호(Critical Minority Data)가 저차원
+                    표현에서 희석되는 한계가 존재합니다. 본 연구는 이러한 문제를 해결하여 핵심 소수 신호를 보존하는 알고리즘을 목표로 진행 중입니다.</p>
             </div>
         </div>
     </section>
@@ -250,18 +500,24 @@ title: Portfolio
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Projects</h2>
         <div class="space-y-12">
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">Agentic Graph RAG</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.01 - 2026.03 | NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
                     <li>단순 벡터 검색 기반 RAG 환경에서 복잡한 질의 처리 실패와 높은 지연 시간이 발생</li>
-                    <li>LangGraph 기반 상태 머신, LLM Tool Router, MCP 연동, Graph DB 검색 분기, Quality Gate 기반 Self-Correction 로직 설계 및 구현</li>
-                    <li>자율적 도구 제어가 가능한 Agentic AI 시스템을 구축하고, SGLang 최적화를 통해 응답 latency를 30초 대에서 10초 이내로 단축(약 67% 개선)하여 실서비스 적용 가능한 수준의 응답성 확보</li>
+                    <li>LangGraph 기반 상태 머신, LLM Tool Router, MCP 연동, Graph DB 검색 분기, Quality Gate 기반 Self-Correction 로직
+                        설계 및 구현</li>
+                    <li>자율적 도구 제어가 가능한 Agentic AI 시스템을 구축하고, SGLang 최적화를 통해 응답 latency를 30초 대에서 10초 이내로 단축(약 67% 개선)하여
+                        실서비스 적용 가능한 수준의 응답성 확보</li>
                 </ul>
-                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG"
+                    class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print"
+                    target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">한국어 Query Rewriter SLM 파인튜닝</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.09 - 2025.11 | NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -271,7 +527,8 @@ title: Portfolio
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">Custom Vector RAG</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.06 - 2025.10 | NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -281,7 +538,8 @@ title: Portfolio
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">Dynamic Pricing 추천 모델</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.08 - 2024.11 | PRICEONE</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -291,7 +549,8 @@ title: Portfolio
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">딥테크 팁스(TIPS) R&D 모델링</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.02 - 2024.07 | SPEECHLOG</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -300,7 +559,8 @@ title: Portfolio
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">NLP 기반 여론 분석 플랫폼</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2023.04 - 2023.12 | SPEECHLOG</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -316,7 +576,8 @@ title: Portfolio
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Mini Projects</h2>
         <div class="space-y-12">
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">Mamba Architecture</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.04 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -324,20 +585,26 @@ title: Portfolio
                     <li>기존 Transformer의 O(N²) 어텐션 연산을 O(N) 복잡도의 Selective State Space Models (SSMs)로 대체</li>
                     <li>입력 의존적 파라미터(B, C, Δ)를 활용한 컨텍스트 인지(Context Awareness) 메커니즘 검증 및 테스트 코드 작성</li>
                 </ul>
-                <a href="https://github.com/JEONGHEESIK/Mamba-Selective-SSM" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                <a href="https://github.com/JEONGHEESIK/Mamba-Selective-SSM"
+                    class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print"
+                    target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">Crazy Arcade RL Agent</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.10 - 2025.12 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
                     <li>C++/Python TCP 소켓 연동 기반 실시간 강화학습 환경 설계</li>
                     <li>CNN Fusion 구조와 통신 최적화를 통해 전송 효율 2배 향상, 실시간 시스템 디버깅 경험 확보</li>
                 </ul>
-                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                <a href="https://github.com/JEONGHEESIK/CrazyArcade"
+                    class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print"
+                    target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">PyTorch 기반 Transformer 번역 모델</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.03 - 2024.06 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -390,14 +657,16 @@ title: Portfolio
                     </p>
                 </div>
                 <div>
-                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Frameworks & Libraries</span>
+                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Frameworks &
+                        Libraries</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
                         LangGraph, Hugging Face<br>
                         SGLang, LangChain
                     </p>
                 </div>
                 <div>
-                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Infra & System</span>
+                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Infra &
+                        System</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
                         Python, C, Linux<br>
                         Docker, Neo4j, TCP Socket
@@ -420,22 +689,22 @@ title: Portfolio
                 <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold text-sm">/ Certifications</h2>
                 <ul class="text-gray-400 font-light text-sm space-y-4">
                     <li class="flex items-start gap-3">
-                        <i class="fas fa-certificate text-gray-600 mt-1"></i> 
+                        <i class="fas fa-certificate text-gray-600 mt-1"></i>
                         <span>
-                            <strong class="text-gray-300 block">컴퓨터활용능력 1급</strong> 
+                            <strong class="text-gray-300 block">컴퓨터활용능력 1급</strong>
                             <span class="text-xs text-gray-500">대한상공회의소</span>
                         </span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="fas fa-certificate text-gray-600 mt-1"></i> 
+                        <i class="fas fa-certificate text-gray-600 mt-1"></i>
                         <span>
-                            <strong class="text-gray-300 block">ITQ 엑셀 (A)</strong> 
+                            <strong class="text-gray-300 block">ITQ 엑셀 (A)</strong>
                         </span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="fas fa-certificate text-gray-600 mt-1"></i> 
+                        <i class="fas fa-certificate text-gray-600 mt-1"></i>
                         <span>
-                            <strong class="text-gray-300 block">ITQ 파워포인트 (A)</strong> 
+                            <strong class="text-gray-300 block">ITQ 파워포인트 (A)</strong>
                         </span>
                     </li>
                 </ul>
@@ -451,8 +720,8 @@ title: Portfolio
             </div>
         </div>
     </section>
-    <footer class="mt-20 pt-10 flex justify-between items-center text-gray-600 mono text-xs uppercase tracking-[0.2em] no-print border-t border-gray-900">
+    <footer
+        class="mt-20 pt-10 flex justify-between items-center text-gray-600 mono text-xs uppercase tracking-[0.2em] no-print border-t border-gray-900">
         <p>© 2026 JEONGHEESIK.</p>
     </footer>
 </div>
-\n
