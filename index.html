@@ -44,6 +44,19 @@ title: Portfolio
     body.hide-sidebar #sidebar { display: none !important; }
     body.hide-sidebar #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
 
+    /* Floating Sidebar Toggle Button */
+    #sidebar-toggle {
+        top: 20px;
+        left: 215px; /* Positioned at the top right of the 260px sidebar */
+    }
+    body.hide-sidebar #sidebar-toggle {
+        left: 20px; /* Moves to the left edge when sidebar is hidden */
+    }
+    @media (max-width: 849px) {
+        /* Hide our custom toggle on mobile since Chirpy has its own topbar hamburger */
+        #sidebar-toggle { display: none !important; }
+    }
+
     @media print {
         body { background-color: #ffffff !important; color: #111827 !important; }
         * { color: #111827 !important; } 
@@ -60,6 +73,25 @@ title: Portfolio
 </style>
 
 <div id="portfolio-wrapper" class="p-8 md:p-20 max-w-7xl mx-auto"> 
+    
+    <!-- Floating Toggle Button -->
+    <button id="sidebar-toggle" onclick="toggleSidebar()" class="no-print fixed z-[9999] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 bg-[#080808] border border-gray-800 rounded hover:border-gray-500 cursor-pointer" style="width: 28px; height: 28px;">
+        <i class="fas fa-chevron-left text-[10px]"></i>
+    </button>
+    <script>
+        function toggleSidebar() {
+            document.body.classList.toggle('hide-sidebar');
+            const icon = document.querySelector('#sidebar-toggle i');
+            if (document.body.classList.contains('hide-sidebar')) {
+                icon.classList.remove('fa-chevron-left');
+                icon.classList.add('fa-chevron-right');
+            } else {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-left');
+            }
+        }
+    </script>
+
     <header class="mb-16">
         <div class="flex flex-col md:flex-row justify-between items-start mb-10 gap-8">
             <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
@@ -68,9 +100,6 @@ title: Portfolio
                     <h1 class="tracking-tighter uppercase leading-none mb-3">JEONG HEESIK</h1>
                     <div class="flex flex-wrap gap-3 items-center">
                         <span class="edu-badge mono uppercase text-white">Sogang Univ. GS AI·SW (AI·DS)</span>
-                        <button onclick="document.body.classList.toggle('hide-sidebar');" class="no-print mono text-[11px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-3 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
-                            <i class="fas fa-columns"></i> Toggle Sidebar
-                        </button>
                         <button onclick="window.print()" class="no-print mono text-[11px] text-gray-400 hover:text-white border border-gray-700 hover:border-white px-3 py-1 ml-2 transition-colors uppercase tracking-widest cursor-pointer">
                             <i class="fas fa-file-pdf"></i> Save as PDF
                         </button>
