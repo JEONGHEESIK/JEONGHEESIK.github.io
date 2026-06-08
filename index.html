@@ -240,19 +240,8 @@ title: Portfolio
                 <strong class="text-gray-300 text-md">Task-Aware Randomized SVD (가제)</strong><br>
                 <span class="text-gray-500 text-sm block mt-1">실시간 On-Device/엣지 AI 환경에서 핵심 소수 데이터의 정보 손실 방지를 위한 고속 차원 축소 및 추론 방법론</span>
             </div>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <span class="par-label mono w-5 mt-0.5 text-red-400">P:</span>
-                    <span class="par-text leading-relaxed">기존 PCA/SVD 계열 차원 축소는 전체 분산(Variance) 중심으로 압축하여, 빈도는 낮으나 치명적으로 중요한 이상 신호(Critical Minority Data)가 저차원 표현에서 희석되는 한계 존재.</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span>
-                    <span class="par-text leading-relaxed">Task 목적을 반영한 가중치(Task-Aware weighting)와 Randomized SVD를 결합하여, 연산 복잡도는 낮추면서도 핵심 소수 신호를 보존하는 아키텍처 설계.</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="par-label mono w-5 mt-0.5 text-green-400">S:</span>
-                    <span class="par-text leading-relaxed"><strong>Status & Validation:</strong> Isaac Sim 시뮬레이션 환경 구축 완료. 급작스러운 장애물 출현, 기기 자세 불균형 등 제어 실패를 유발할 수 있는 'Corner Case'를 의도적으로 생성하여, 압축률 변화에 따른 소수 클래스 보존율과 지연 시간 최소화 가능성을 탐색 및 검증 중.</span>
-                </div>
+            <div class="text-gray-400 font-light text-sm space-y-2">
+                <p>기존 PCA/SVD 계열 차원 축소는 전체 분산(Variance) 중심으로 압축하여, 빈도는 낮으나 치명적으로 중요한 이상 신호(Critical Minority Data)가 저차원 표현에서 희석되는 한계가 존재합니다. 본 연구는 이러한 문제를 해결하여 핵심 소수 신호를 보존하는 아키텍처를 목표로 진행 중입니다.</p>
             </div>
         </div>
     </section>
@@ -262,38 +251,73 @@ title: Portfolio
         <div class="space-y-12">
             <div class="relative pl-6 border-l-2 border-gray-800">
                 <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">Agentic Graph RAG 아키텍처 설계 및 서비스 배포</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.03 - Present | NEXTITS</span>
-                <ul class="text-gray-400 font-light text-sm space-y-2 list-none">
-                    <li><strong>Problem:</strong> 단순 벡터 검색 기반 RAG 환경에서 복잡한 질의 처리 실패와 높은 지연 시간이 발생</li>
-                    <li><strong>Action:</strong> LangGraph 기반 상태 머신, LLM Tool Router, MCP 연동, Graph DB 검색 분기, Quality Gate 기반 Self-Correction 로직 설계 및 구현</li>
-                    <li><strong>Result:</strong> 자율적 도구 제어가 가능한 Agentic AI 시스템을 구축하고, SGLang 최적화를 통해 응답 latency를 30초 대에서 10초 이내로 단축(약 67% 개선)하여 실서비스 적용 가능한 수준의 응답성 확보</li>
+                <h3 class="text-white font-bold text-lg mb-1">Custom Vector RAG 개발</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.06 - 2026.10 | NEXTITS</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>상용 프레임워크 사용 시 검색 파이프라인 내부 로직을 세밀하게 제어하기 어려움</li>
+                    <li>임베딩 연산, 코사인 유사도, Top-K 검색 로직을 Python 기반으로 직접 설계 및 구현</li>
+                    <li>상용 프레임워크 의존 없이 검색 파이프라인 핵심 메커니즘을 직접 설계·제어할 수 있는 기반 확보</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
                 <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">한국어 Query Rewriter SLM 파인튜닝 및 서비스 연동</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.03 - Present | NEXTITS</span>
-                <ul class="text-gray-400 font-light text-sm space-y-2 list-none">
-                    <li><strong>Problem:</strong> 사용자 질의의 모호성으로 인해 검색 정확도가 저하되는 문제 발생</li>
-                    <li><strong>Action:</strong> SLM 기반 DPO / DoRA 파인튜닝 수행 및 질의 재작성 기능을 서비스 환경에 연동</li>
-                    <li><strong>Result:</strong> 검색 친화적 질의 재작성 기능을 구현하고, RAG 파이프라인 품질 개선 가능성과 소형 모델의 한계를 함께 검증</li>
+                <h3 class="text-white font-bold text-lg mb-1">Agentic Graph RAG 아키텍처 설계 및 개발</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.01 - 2026.03 | NEXTITS</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>단순 벡터 검색 기반 RAG 환경에서 복잡한 질의 처리 실패와 높은 지연 시간이 발생</li>
+                    <li>LangGraph 기반 상태 머신, LLM Tool Router, MCP 연동, Graph DB 검색 분기, Quality Gate 기반 Self-Correction 로직 설계 및 구현</li>
+                    <li>자율적 도구 제어가 가능한 Agentic AI 시스템을 구축하고, SGLang 최적화를 통해 응답 latency를 30초 대에서 10초 이내로 단축(약 67% 개선)하여 실서비스 적용 가능한 수준의 응답성 확보</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
                 <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">Custom Vector RAG 파이프라인 자체 구축</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.03 - Present | NEXTITS</span>
-                <ul class="text-gray-400 font-light text-sm space-y-2 list-none">
-                    <li><strong>Problem:</strong> 상용 프레임워크 사용 시 검색 파이프라인 내부 로직을 세밀하게 제어하기 어려움</li>
-                    <li><strong>Action:</strong> 임베딩 연산, 코사인 유사도, Top-K 검색 로직을 Python 기반으로 직접 설계 및 구현</li>
-                    <li><strong>Result:</strong> 상용 프레임워크 의존 없이 검색 파이프라인 핵심 메커니즘을 직접 설계·제어할 수 있는 기반 확보</li>
+                <h3 class="text-white font-bold text-lg mb-1">한국어 Query Rewriter SLM 파인튜닝</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.09 - 2025.11 | NEXTITS</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>사용자 질의의 모호성으로 인해 검색 정확도가 저하되는 문제 발생</li>
+                    <li>SLM 기반 DPO / DoRA 파인튜닝 수행 및 질의 재작성 기능을 서비스 환경에 연동</li>
+                    <li>검색 친화적 질의 재작성 기능을 구현하고, RAG 파이프라인 품질 개선 가능성과 소형 모델의 한계를 함께 검증</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
                 <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">Crazy Arcade RL Agent 개발</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2025 | Personal Project</span>
+                <h3 class="text-white font-bold text-lg mb-1">Dynamic Pricing 추천 모델 개발</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.08 - 2024.11 | PRICEONE</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>경쟁사 가격 모니터링과 가격 산정이 수작업 중심으로 이루어져 업무 효율이 낮음</li>
+                    <li>OTA 데이터 자동 수집 파이프라인을 구축하고, 날씨·계절성 등 외부 변수를 포함한 피처 엔지니어링 및 데이터 전처리 환경 설계</li>
+                    <li>가격 추천 모델 학습을 위한 자동화 데이터 기반을 구축하여 수작업 프로세스를 데이터 중심 구조로 전환할 수 있는 토대 마련</li>
+                </ul>
+            </div>
+            <div class="relative pl-6 border-l-2 border-gray-800">
+                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <h3 class="text-white font-bold text-lg mb-1">딥테크 팁스(TIPS) R&D 모델링</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.02 - 2024.07 | SPEECHLOG</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>AI 페르소나 파인튜닝 모델 프로토타입 구축 및 정부 지원 과제 핵심 R&D 수행</li>
+                    <li>서비스 확장을 위한 AI 모델링 방향성과 프로토타이핑 경험 확보</li>
+                </ul>
+            </div>
+            <div class="relative pl-6 border-l-2 border-gray-800">
+                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <h3 class="text-white font-bold text-lg mb-1">NLP 기반 여론 분석 플랫폼</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2023.04 - 2023.12 | SPEECHLOG</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>다수의 정부 부처가 활용할 수 있는 안정적인 텍스트 기반 여론 분석 시스템 구축 필요</li>
+                    <li>데이터 수집·분석 파이프라인과 백엔드 시스템을 1인 전담하여 설계, 구축, 운영</li>
+                    <li>45개 정부 부처 및 공공기관이 활용하는 여론 분석 시스템을 런칭하고 안정적으로 운영</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 4-1. Mini Projects -->
+    <section class="mb-20 mt-20">
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Mini Projects</h2>
+        <div class="space-y-12">
+            <div class="relative pl-6 border-l-2 border-gray-800">
+                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <h3 class="text-white font-bold text-lg mb-1">Crazy Arcade RL Agent</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.10 - 2025.12 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
                     <li>C++/Python TCP 소켓 연동 기반 실시간 강화학습 환경 설계</li>
                     <li>CNN Fusion 구조와 통신 최적화를 통해 전송 효율 2배 향상, 실시간 시스템 디버깅 경험 확보</li>
@@ -301,40 +325,11 @@ title: Portfolio
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
                 <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">Dynamic Pricing 추천 모델 개발</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.08 - 2024.11 | PRICEONE</span>
-                <ul class="text-gray-400 font-light text-sm space-y-2 list-none">
-                    <li><strong>Problem:</strong> 경쟁사 가격 모니터링과 가격 산정이 수작업 중심으로 이루어져 업무 효율이 낮음</li>
-                    <li><strong>Action:</strong> OTA 데이터 자동 수집 파이프라인을 구축하고, 날씨·계절성 등 외부 변수를 포함한 피처 엔지니어링 및 데이터 전처리 환경 설계</li>
-                    <li><strong>Result:</strong> 가격 추천 모델 학습을 위한 자동화 데이터 기반을 구축하여 수작업 프로세스를 데이터 중심 구조로 전환할 수 있는 토대 마련</li>
-                </ul>
-            </div>
-            <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">PyTorch 기반 Transformer 아키텍처 구현</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.03 - 2024.06 | Personal Project</span>
+                <h3 class="text-white font-bold text-lg mb-1">PyTorch 기반 Transformer 번역 모델</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.03 - 2024.06 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
                     <li>'Attention is All You Need' 기반 Transformer 구조를 from-scratch로 구현</li>
                     <li>과적합 및 학습 속도 저하 문제를 튜닝과 전처리 최적화로 개선하며 모델 구조 이해도 확보</li>
-                </ul>
-            </div>
-            <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">B2G NLP 여론 분석 플랫폼 개발 및 운영</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2023.04 - 2024.07 | SPEECHLOG</span>
-                <ul class="text-gray-400 font-light text-sm space-y-2 list-none">
-                    <li><strong>Problem:</strong> 다수의 정부 부처가 활용할 수 있는 안정적인 텍스트 기반 여론 분석 시스템 구축 필요</li>
-                    <li><strong>Action:</strong> 데이터 수집·분석 파이프라인과 백엔드 시스템을 1인 전담하여 설계, 구축, 운영</li>
-                    <li><strong>Result:</strong> 45개 정부 부처 및 공공기관이 활용하는 여론 분석 시스템을 런칭하고 안정적으로 운영</li>
-                </ul>
-            </div>
-            <div class="relative pl-6 border-l-2 border-gray-800">
-                <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
-                <h3 class="text-white font-bold text-lg mb-1">딥테크 팁스(TIPS) R&D 모델링</h3>
-                <span class="mono text-xs text-gray-500 uppercase block mb-4">2023.04 - 2024.07 | SPEECHLOG</span>
-                <ul class="text-gray-400 font-light text-sm space-y-2 list-none">
-                    <li><strong>Action:</strong> AI 페르소나 파인튜닝 모델 프로토타입 구축 및 정부 지원 과제 핵심 R&D 수행</li>
-                    <li><strong>Result:</strong> 서비스 확장을 위한 AI 모델링 방향성과 프로토타이핑 경험 확보</li>
                 </ul>
             </div>
         </div>
