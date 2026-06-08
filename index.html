@@ -15,7 +15,6 @@ title: Portfolio
     #portfolio-wrapper a { text-decoration: none; color: inherit; }
     #portfolio-wrapper ul { list-style: none; }
     #portfolio-wrapper button { background: none; border: none; padding: 0; cursor: pointer; }
-
     #portfolio-wrapper .mono { font-family: 'JetBrains Mono', monospace; }
     #portfolio-wrapper .project-card, #portfolio-wrapper .exp-card, #portfolio-wrapper .par-card { 
         background: #080808; 
@@ -30,21 +29,17 @@ title: Portfolio
     #portfolio-wrapper h3 { font-size: 1.2rem !important; color: #fff; }
     #portfolio-wrapper p { margin-bottom: 1.5rem !important; }
     #portfolio-wrapper .profile-img { width: 120px; height: 120px; object-fit: cover; border: 1px solid #333; border-radius: 0; }
-    
     #portfolio-wrapper .par-label { color: #888; font-weight: 800; margin-right: 6px; font-size: 0.7rem; }
     #portfolio-wrapper .par-text { color: #a1a1aa; font-size: 0.8rem; font-weight: 300; }
     #portfolio-wrapper .badge-outline { border: 1px solid #4b5563; color: #9ca3af; padding: 1px 6px; font-size: 0.6rem; border-radius: 12px; }
-
     /* Override Chirpy's main wrapper restrictions to let the portfolio breathe */
     #main-wrapper { padding-top: 0 !important; }
     #main { padding-left: 0 !important; padding-right: 0 !important; }
     #main > .row { max-width: 100% !important; margin: 0 !important; width: 100%; }
     #core-wrapper { width: 100% !important; padding-left: 0; padding-right: 0; }
-
     /* Sidebar hide toggle logic */
     body.hide-sidebar #sidebar { display: none !important; }
     body.hide-sidebar #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
-
     /* Light Mode Overrides */
     html[data-mode="light"] #portfolio-wrapper { color: #4b5563; }
     html[data-mode="light"] #portfolio-wrapper .project-card,
@@ -75,7 +70,6 @@ title: Portfolio
     html[data-mode="light"] #portfolio-wrapper .par-label { color: #4b5563; }
     html[data-mode="light"] #portfolio-wrapper .par-text { color: #374151; }
     html[data-mode="light"] #portfolio-wrapper .badge-outline { color: #6b7280; border-color: #d1d5db; }
-    
     /* Tailwind Color Overrides for Light Mode */
     html[data-mode="light"] #portfolio-wrapper .text-white { color: #111827 !important; }
     html[data-mode="light"] #portfolio-wrapper .text-gray-200 { color: #1f2937 !important; }
@@ -84,15 +78,12 @@ title: Portfolio
     html[data-mode="light"] #portfolio-wrapper .text-gray-500 { color: #6b7280 !important; }
     html[data-mode="light"] #portfolio-wrapper .text-gray-600 { color: #9ca3af !important; }
     html[data-mode="light"] #portfolio-wrapper .text-gray-700 { color: #d1d5db !important; }
-    
     html[data-mode="light"] #portfolio-wrapper .border-gray-900 { border-color: #e5e7eb !important; }
     html[data-mode="light"] #portfolio-wrapper .border-gray-800 { border-color: #d1d5db !important; }
     html[data-mode="light"] #portfolio-wrapper .border-gray-700 { border-color: #9ca3af !important; }
-    
     html[data-mode="light"] #portfolio-wrapper .hover\:text-white:hover { color: #111827 !important; }
     html[data-mode="light"] #portfolio-wrapper .hover\:border-white:hover { border-color: #111827 !important; }
     html[data-mode="light"] #sidebar-toggle { background: #ffffff !important; border-color: #d1d5db !important; color: #4b5563 !important; }
-
     /* Floating Sidebar Toggle Button */
     #sidebar-toggle {
         top: 20px;
@@ -105,7 +96,6 @@ title: Portfolio
         /* Hide our custom toggle on mobile since Chirpy has its own topbar hamburger */
         #sidebar-toggle { display: none !important; }
     }
-
     @media print {
         body { background-color: #ffffff !important; color: #111827 !important; }
         * { color: #111827 !important; } 
@@ -120,9 +110,7 @@ title: Portfolio
         @page { margin: 15mm; }
     }
 </style>
-
 <div id="portfolio-wrapper" class="p-8 md:p-20 max-w-7xl mx-auto"> 
-    
     <!-- Floating Toggle Button -->
     <button id="sidebar-toggle" onclick="toggleSidebar()" class="no-print fixed z-[9999] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 bg-[#080808] border border-gray-800 rounded hover:border-gray-500 cursor-pointer" style="width: 28px; height: 28px;">
         <i class="fas fa-chevron-left text-[10px]"></i>
@@ -139,7 +127,6 @@ title: Portfolio
                 icon.classList.add('fa-chevron-left');
             }
         }
-
         // Dynamically rename 'Home' tab to 'Portfolio'
         document.addEventListener('DOMContentLoaded', () => {
             const homeTabs = document.querySelectorAll('.nav-item a[href="/"] span, .nav-item a[href="/JEONGHEESIK.github.io/"] span');
@@ -150,7 +137,6 @@ title: Portfolio
             });
         });
     </script>
-
     <header class="mb-16">
         <div class="flex flex-col md:flex-row justify-between items-start mb-10 gap-8">
             <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
@@ -170,7 +156,6 @@ title: Portfolio
                 <span class="text-[11px] mono text-gray-600 uppercase tracking-widest block">Last updated 2026.06.08</span>
             </div>
         </div>
-        
         <div class="grid grid-cols-1 border-t border-gray-900 pt-10">
             <div class="flex flex-wrap gap-6 mono text-xs text-gray-500 uppercase tracking-wider mb-6">
                 <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5"><i class="fas fa-envelope"></i> Email</a>
@@ -180,7 +165,6 @@ title: Portfolio
             </div>
         </div>
     </header>
-
     <!-- 1. Introduction -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Introduction</h2>
@@ -196,7 +180,6 @@ title: Portfolio
             </p>
         </div>
     </section>
-
     <!-- 2. Work Experience -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Work Experience</h2>
@@ -208,7 +191,6 @@ title: Portfolio
                     <span class="mono text-xs text-gray-600 uppercase">2025.03 - Present</span>
                 </div>
                 <p class="text-gray-400 font-medium text-sm mb-6 uppercase">AI Engineer / Data Scientist 직무</p>
-                
                 <div class="space-y-6">
                     <div>
                         <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Agentic Graph RAG 아키텍처 및 파이프라인 개발</h4>
@@ -227,7 +209,6 @@ title: Portfolio
                     </div>
                 </div>
             </div>
-            
             <!-- Priceone -->
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start mb-4">
@@ -245,7 +226,6 @@ title: Portfolio
                     </div>
                 </div>
             </div>
-
             <!-- Speechlog -->
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start mb-4">
@@ -270,18 +250,15 @@ title: Portfolio
             </div>
         </div>
     </section>
-
     <!-- 3. Education & Publications -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Education & Publications</h2>
-        
         <div class="exp-card p-8 border-l-2 border-gray-800 mb-6">
             <div class="flex justify-between items-start mb-4">
                 <h3 class="font-bold text-white uppercase tracking-tight text-lg">서강대학교 일반대학원 인공지능데이터사이언스학과 (AI·DS)</h3>
                 <span class="mono text-xs text-gray-600 uppercase">2025.02 - Present</span>
             </div>
             <p class="text-gray-400 font-medium text-sm mb-4">석사 과정 (Master's Student)</p>
-            
             <div class="mt-6 border-t border-gray-800 pt-4">
                 <h4 class="text-gray-300 font-semibold text-sm mb-2 mono">Interests and Experiments</h4>
                 <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light">
@@ -291,27 +268,23 @@ title: Portfolio
                 </ul>
             </div>
         </div>
-        
-        <!-- Publications Placeholder -->
         <div class="exp-card p-8 border-l-2 border-gray-800">
             <h3 class="font-bold text-white uppercase tracking-tight text-lg mb-4">Publications & Honors</h3>
             <ul class="text-gray-500 text-sm list-disc list-inside space-y-3 font-light">
                 <li>
-                    <strong class="text-gray-300">[1] 논문 제목이나 특허가 있다면 여기에 작성하세요</strong><br>
-                    <span class="ml-5 inline-block text-xs mt-1">논문에 대한 간략한 설명이나 학회 발표 내용을 적을 수 있습니다.</span><br>
+                    <strong class="text-gray-300">Task-Aware Randomized SVD (가제)</strong><br>
+                    <span class="ml-5 inline-block text-xs mt-1">현재 논문 작성을 위한 실험 진행 중입니다.</span><br>
                     <div class="ml-5 mt-1 flex gap-2">
-                        <span class="badge-outline">SCIE</span> <span class="badge-outline">2026.06</span>
+                        <span class="badge-outline">Ongoing Research</span>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
-
     <!-- 4. Major Projects -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Major Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            
             <div class="flex flex-col gap-3">
                 <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[220px]">
                     <div>
@@ -344,7 +317,6 @@ title: Portfolio
                     </div>
                 </div>
             </div>
-
             <div class="flex flex-col gap-3">
                 <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[220px]">
                     <div>
@@ -368,15 +340,12 @@ title: Portfolio
                     <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">특정 장애물 패턴에 에이전트가 오버피팅되는 한계를 발견하여 일반화 연구 진행 중.</span></div>
                 </div>
             </div>
-
         </div>
     </section>
-
     <!-- 4-1. Mini Projects -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Mini Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            
             <div class="flex flex-col gap-3">
                 <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[200px]">
                     <div>
@@ -396,7 +365,6 @@ title: Portfolio
                     <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">SLM 모델에 DPO 및 DoRA 기법을 적용하여 검색 친화적 리라이팅 수행.</span></div>
                 </div>
             </div>
-
             <div class="flex flex-col gap-3">
                 <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[200px]">
                     <div>
@@ -416,7 +384,6 @@ title: Portfolio
                     <div class="flex items-start"><span class="par-label mono">What:</span><span class="par-text">Mamba 논문 기반 Selective SSM 아키텍처 구현 및 O(N) 연산량 확인.</span></div>
                 </div>
             </div>
-
             <div class="flex flex-col gap-3">
                 <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[200px]">
                     <div>
@@ -436,10 +403,8 @@ title: Portfolio
                     <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">임베딩, 코사인 유사도 연산 로직을 순수 Python 라이브러리로 직접 구현.</span></div>
                 </div>
             </div>
-
         </div>
     </section>
-
     <!-- 5. Extracurricular Activities -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Extracurricular Activities</h2>
@@ -447,63 +412,60 @@ title: Portfolio
             <div class="exp-card p-6 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h4 class="font-bold text-gray-300 text-md">가이드: 스터디 운영 및 참여 기록</h4>
-                        <p class="text-gray-500 text-sm mt-2 font-light">AI 관련 스터디, 논문 리딩, 커뮤니티 활동 내역을 여기에 작성하세요.</p>
+                        <h4 class="font-bold text-gray-300 text-md">AGENT 관련 논문 스터디</h4>
+                        <p class="text-gray-500 text-sm mt-2 font-light">
+                            대학원생 13명과 함께 AGENT 관련 최신 논문을 분석하고 공유하는 스터디 참여. <br>
+                            각자 논문을 분석해오고 일주일에 2명씩 심층 발표하는 형식으로 진행.
+                        </p>
                     </div>
-                    <span class="mono text-xs text-gray-600 uppercase">2025 - Present</span>
+                    <span class="mono text-xs text-gray-600 uppercase">2025 Summer</span>
                 </div>
             </div>
-            
             <div class="exp-card p-6 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h4 class="font-bold text-gray-300 text-md">가이드: 부트캠프 및 교육 수료</h4>
-                        <p class="text-gray-500 text-sm mt-2 font-light">구글 클라우드 스터디잼, 부트캠프 등 관련 분야 수료 내역을 여기에 작성하세요.</p>
+                        <h4 class="font-bold text-gray-300 text-md">AI / 빅데이터 교육 과정 수료</h4>
+                        <p class="text-gray-500 text-sm mt-2 font-light">
+                            대구 IT 아카데미에서 주관하는 AI 및 빅데이터 실무 교육 과정 수료.
+                        </p>
                     </div>
-                    <span class="mono text-xs text-gray-600 uppercase">2024</span>
+                    <span class="mono text-xs text-gray-600 uppercase">2022.07 - 2023.01</span>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- 6. Skills -->
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Tech Skills</h2>
         <div class="exp-card p-8 border-l-2 border-gray-800">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-8 text-sm">
-                
                 <div>
                     <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Language</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
                         Python, C++, R, LaTeX
                     </p>
                 </div>
-                
                 <div>
                     <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">DL / ML Framework</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
                         TensorFlow, PyTorch, HuggingFace, LangChain, LangGraph, Scikit-learn
                     </p>
                 </div>
-                
                 <div>
                     <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">MLOps & Backend</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
                         Docker, FastAPI, TensorRT, ONNX, Kafka
                     </p>
                 </div>
-                
                 <div>
                     <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Database & Analysis</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
                         Vector DB (FAISS, Weaviate), Neo4j, PostgreSQL, Pandas, Numpy
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
-
     <!-- 7. Certifications & Languages -->
     <section class="mb-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -513,20 +475,24 @@ title: Portfolio
                     <li class="flex items-start gap-3">
                         <i class="fas fa-certificate text-gray-600 mt-1"></i> 
                         <span>
-                            <strong class="text-gray-300 block">빅데이터 분석기사</strong> 
-                            <span class="text-xs text-gray-500">한국데이터산업진흥원</span>
+                            <strong class="text-gray-300 block">컴퓨터활용능력 1급</strong> 
+                            <span class="text-xs text-gray-500">대한상공회의소</span>
                         </span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i class="fas fa-certificate text-gray-600 mt-1"></i> 
                         <span>
-                            <strong class="text-gray-300 block">데이터분석 준전문가 (ADsP)</strong> 
-                            <span class="text-xs text-gray-500">한국데이터산업진흥원</span>
+                            <strong class="text-gray-300 block">ITQ 엑셀 (A)</strong> 
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-certificate text-gray-600 mt-1"></i> 
+                        <span>
+                            <strong class="text-gray-300 block">ITQ 파워포인트 (A)</strong> 
                         </span>
                     </li>
                 </ul>
             </div>
-            
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-6 font-bold text-sm">/ Languages</h2>
                 <ul class="text-gray-400 font-light text-sm space-y-4">
@@ -538,7 +504,6 @@ title: Portfolio
             </div>
         </div>
     </section>
-
     <footer class="mt-20 pt-10 flex justify-between items-center text-gray-600 mono text-xs uppercase tracking-[0.2em] no-print border-t border-gray-900">
         <p>© 2026 JEONGHEESIK.</p>
     </footer>
