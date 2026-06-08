@@ -184,59 +184,86 @@ title: Portfolio
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Work Experience</h2>
         <div class="space-y-6">
+            
             <!-- NEXTITS -->
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="font-bold text-white uppercase tracking-tight text-xl">NEXTITS</h3>
                     <span class="mono text-xs text-gray-600 uppercase">2025.03 - Present</span>
                 </div>
-                <p class="text-gray-400 font-medium text-sm mb-6 uppercase">AI Engineer 직무</p>
-                <div class="space-y-6">
+                <p class="text-gray-400 font-medium text-sm mb-6 uppercase">AI Engineer <span class="lowercase font-light tracking-normal text-gray-500 ml-2">- LLM/SLM 기반 AI 서비스 설계 및 개발, 배포 및 추론 최적화</span></p>
+                
+                <div class="space-y-8">
                     <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 SLM Query Rewriter 최적화 R&D</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>Qwen3-0.6B 기반 DPO(Direct Preference Optimization) 파인튜닝을 통한 질의 유의어 최적화</li>
-                            <li>텍스트·이미지 데이터 기반 글감 생성 및 LLM Tuning 자동화 프레임워크 연구</li>
-                        </ul>
+                        <h4 class="text-gray-200 font-bold text-sm mb-3">● Agentic Graph RAG 아키텍처 설계 및 서비스 배포</h4>
+                        <div class="space-y-2 ml-2">
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-red-400">P:</span><span class="par-text">단순 벡터 검색 기반 RAG 환경에서 복잡한 질의 처리 실패와 높은 지연 시간이 발생</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span><span class="par-text">LangGraph 기반 상태 머신, LLM Tool Router, MCP 연동, Graph DB 검색 분기, Quality Gate 기반 Self-Correction 로직 설계 및 구현</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-green-400">R:</span><span class="par-text">자율적 도구 제어가 가능한 Agentic AI 시스템을 구축하고, SGLang 최적화를 통해 응답 latency를 30초 대에서 10초 이내로 단축(약 67% 개선)하여 실서비스 적용 가능한 수준의 응답성 확보</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-200 font-bold text-sm mb-3">● 한국어 Query Rewriter SLM 파인튜닝 및 서비스 연동</h4>
+                        <div class="space-y-2 ml-2">
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-red-400">P:</span><span class="par-text">사용자 질의의 모호성으로 인해 검색 정확도가 저하되는 문제 발생</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span><span class="par-text">SLM 기반 DPO / DoRA 파인튜닝 수행 및 질의 재작성 기능을 서비스 환경에 연동</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-green-400">R:</span><span class="par-text">검색 친화적 질의 재작성 기능을 구현하고, RAG 파이프라인 품질 개선 가능성과 소형 모델의 한계를 함께 검증</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-200 font-bold text-sm mb-3">● Custom Vector RAG 파이프라인 자체 구축</h4>
+                        <div class="space-y-2 ml-2">
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-red-400">P:</span><span class="par-text">상용 프레임워크 사용 시 검색 파이프라인 내부 로직을 세밀하게 제어하기 어려움</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span><span class="par-text">임베딩 연산, 코사인 유사도, Top-K 검색 로직을 Python 기반으로 직접 설계 및 구현</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-green-400">R:</span><span class="par-text">상용 프레임워크 의존 없이 검색 파이프라인 핵심 메커니즘을 직접 설계·제어할 수 있는 기반 확보</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Priceone -->
+
+            <!-- PRICEONE -->
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Priceone</h3>
+                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">PRICEONE</h3>
                     <span class="mono text-xs text-gray-600 uppercase">2024.08 - 2024.11</span>
                 </div>
-                <p class="text-gray-400 font-medium text-sm mb-6 uppercase">ML Engineer 직무</p>
-                <div class="space-y-6">
+                <p class="text-gray-400 font-medium text-sm mb-6 uppercase">ML Engineer <span class="lowercase font-light tracking-normal text-gray-500 ml-2">- 동적 가격 추천 모델 개발 및 데이터 파이프라인 구축</span></p>
+                
+                <div class="space-y-8">
                     <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Dynamic Pricing Recommendation System</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>경쟁사 OTA 데이터를 기반으로 수익을 극대화하는 동적 가격 추천 알고리즘 개발</li>
-                            <li>날씨, 계절성 등 외부 변수를 활용한 Feature Engineering 및 자동화된 크롤링 파이프라인 구축</li>
-                        </ul>
+                        <h4 class="text-gray-200 font-bold text-sm mb-3">● Dynamic Pricing 추천 모델 개발</h4>
+                        <div class="space-y-2 ml-2">
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-red-400">P:</span><span class="par-text">경쟁사 가격 모니터링과 가격 산정이 수작업 중심으로 이루어져 업무 효율이 낮음</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span><span class="par-text">OTA 데이터 자동 수집 파이프라인을 구축하고, 날씨·계절성 등 외부 변수를 포함한 피처 엔지니어링 및 데이터 전처리 환경 설계</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-green-400">R:</span><span class="par-text">가격 추천 모델 학습을 위한 자동화 데이터 기반을 구축하여 수작업 프로세스를 데이터 중심 구조로 전환할 수 있는 토대 마련</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Speechlog -->
+
+            <!-- SPEECHLOG -->
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Speechlog</h3>
+                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">SPEECHLOG</h3>
                     <span class="mono text-xs text-gray-600 uppercase">2023.04 - 2024.07</span>
                 </div>
-                <p class="text-gray-400 font-medium text-sm mb-6 uppercase">Data Scientist & Developer 직무</p>
-                <div class="space-y-6">
+                <p class="text-gray-400 font-medium text-sm mb-6 uppercase">Data Scientist & Developer <span class="lowercase font-light tracking-normal text-gray-500 ml-2">- B2G NLP 서비스 백엔드 및 데이터 파이프라인 설계·운영 담당</span></p>
+                
+                <div class="space-y-8">
                     <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 정부 부처 NLP 여론 분석 플랫폼 개발</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>46개 정부 부처를 위한 NLP 여론 분석 플랫폼의 백엔드 아키텍처 및 텍스트 마이닝 로직 단독 개발</li>
-                        </ul>
+                        <h4 class="text-gray-200 font-bold text-sm mb-3">● B2G NLP 여론 분석 플랫폼 개발 및 운영</h4>
+                        <div class="space-y-2 ml-2">
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-red-400">P:</span><span class="par-text">다수의 정부 부처가 활용할 수 있는 안정적인 텍스트 기반 여론 분석 시스템 구축 필요</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span><span class="par-text">데이터 수집·분석 파이프라인과 백엔드 시스템을 1인 전담하여 설계, 구축, 운영</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-green-400">R:</span><span class="par-text">45개 정부 부처 및 공공기관이 활용하는 여론 분석 시스템을 런칭하고 안정적으로 운영</span></div>
+                        </div>
                     </div>
                     <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 딥테크 TIPS R&D 및 페르소나 모델 개발</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>'Deep-tech TIPS' 지원을 위한 AI 페르소나 모델 Fine-tuning 프로토타입 구축 및 R&D 총괄</li>
-                        </ul>
+                        <h4 class="text-gray-200 font-bold text-sm mb-3">● 딥테크 팁스(TIPS) R&D 모델링</h4>
+                        <div class="space-y-2 ml-2">
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span><span class="par-text">AI 페르소나 파인튜닝 모델 프로토타입 구축 및 정부 지원 과제 핵심 R&D 수행</span></div>
+                            <div class="flex items-start"><span class="par-label mono w-5 mt-0.5 text-green-400">R:</span><span class="par-text">서비스 확장을 위한 AI 모델링 방향성과 프로토타이핑 경험 확보</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,143 +309,46 @@ title: Portfolio
             </div>
         </div>
     </section>
-    <!-- 4. Projects -->
+    <!-- 4. Mini Projects -->
     <section class="mb-20">
-        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Projects</h2>
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Mini Projects</h2>
         <div class="space-y-6">
-            <div class="exp-card p-8 border-l-2 border-gray-800">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
-                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Agentic Graph RAG</h3>
-                    <div class="flex flex-col items-start md:items-end gap-1">
-                        <span class="mono text-xs text-gray-600 uppercase">2026.01 - 2026.03 | 개인 프로젝트</span>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="tech-tag">LangGraph</span><span class="tech-tag">SGLang</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Optimization</span>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 My Role</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>전체 아키텍처 설계 및 SGLang 기반 파이프라인 최적화 단독 수행</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Problem & Action</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>단순 검색 기반 RAG의 한계로 인해 외부 도구(Tool) 활용이 필요한 복잡한 질의 추론 실패 문제 해결.</li>
-                            <li><strong>LLM Tool Router</strong>를 통해 MCP 기반 도구 제어와 Graph 검색을 동적으로 분기.</li>
-                            <li>Quality Gate를 통한 자기 반성(Self-Correction) 로직 구현.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Result</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>자율적 도구 제어(Tool Orchestration)가 가능한 에이전트 구축.</li>
-                            <li>SGLang 최적화로 Inference Latency <strong>30초 ➔ 10초 이내(67% 개선)</strong> 단축.</li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
-            </div>
-
-            <div class="exp-card p-8 border-l-2 border-gray-800">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
-                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Understanding Mamba</h3>
-                    <div class="flex flex-col items-start md:items-end gap-1">
-                        <span class="mono text-xs text-gray-600 uppercase">2026 | 개인 프로젝트</span>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="tech-tag">PyTorch</span><span class="tech-tag">SSM</span>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Overview & Action</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>Transformer의 O(N²) 연산 병목 극복 대안 탐색.</li>
-                            <li>Mamba 논문 기반 Selective SSM 아키텍처 구현 및 O(N) 연산량 확인.</li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="https://github.com/JEONGHEESIK/Mamba-Selective-SSM" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
-            </div>
+            
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
                     <h3 class="font-bold text-white uppercase tracking-tight text-xl">Crazy Arcade RL Agent</h3>
                     <div class="flex flex-col items-start md:items-end gap-1">
-                        <span class="mono text-xs text-gray-600 uppercase">2025.10 - 2025.12 | 4인 팀 프로젝트</span>
+                        <span class="mono text-xs text-gray-600 uppercase">2025</span>
                     </div>
                 </div>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 My Role</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>C++/Python TCP 소켓 연동 모듈 개발 및 실시간 대전 데이터 파이프라인 구축</li>
-                            <li>강화학습 에이전트의 상태 데이터 전처리 및 CNN 모델링 (가이드: 실제 역할로 수정 필요)</li>
-                        </ul>
+                <div class="space-y-2">
+                    <div class="flex items-start">
+                        <span class="text-gray-400 font-light text-sm leading-relaxed">- C++/Python TCP 소켓 연동 기반 실시간 강화학습 환경 설계</span>
                     </div>
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Problem & Action</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>실시간 대전 환경의 고차원 상태 데이터 처리 및 Python 기반 학습의 지연 시간 병목 발생.</li>
-                            <li>CNN Fusion 아키텍처 도입 및 C++ 소켓 통신 모듈 최적화로 전송 효율 2배 향상.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Result</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>실시간 대전이 가능한 수준의 에이전트 레이턴시 확보. 특정 장애물 패턴에 오버피팅되는 한계를 발견하여 일반화 연구 진행 중.</li>
-                        </ul>
+                    <div class="flex items-start">
+                        <span class="text-gray-400 font-light text-sm leading-relaxed">- CNN Fusion 구조와 통신 최적화를 통해 전송 효율 2배 향상, 실시간 시스템 디버깅 경험 확보</span>
                     </div>
                 </div>
                 <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
-            <div class="exp-card p-8 border-l-2 border-gray-800">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
-                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">SLM Query Rewriter</h3>
-                    <div class="flex flex-col items-start md:items-end gap-1">
-                        <span class="mono text-xs text-gray-600 uppercase">2025 | 개인 프로젝트</span>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="tech-tag">PyTorch</span><span class="tech-tag">DPO</span><span class="tech-tag">HuggingFace</span>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Overview & Action</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>모호한 사용자 질의가 임베딩되어 검색 정확도가 저하되는 문제를 해결하기 위해, Qwen3-0.6B 기반 SLM 모델에 DPO 및 DoRA 기법을 적용하여 검색 친화적 질의 리라이팅 수행.</li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
-            </div>
 
             <div class="exp-card p-8 border-l-2 border-gray-800">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
-                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Custom Vector RAG</h3>
+                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">PyTorch 기반 Transformer 아키텍처 구현</h3>
                     <div class="flex flex-col items-start md:items-end gap-1">
-                        <span class="mono text-xs text-gray-600 uppercase">2025 | 개인 프로젝트</span>
+                        <span class="mono text-xs text-gray-600 uppercase">2024.03 - 2024.06</span>
                     </div>
                 </div>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="tech-tag">Python</span><span class="tech-tag">Vector DB</span>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Overview & Action</h4>
-                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
-                            <li>상용 RAG 프레임워크의 추상화로 인한 내부 구조 커스터마이징의 한계 확인.</li>
-                            <li>임베딩, 코사인 유사도 연산 로직을 순수 Python 라이브러리로 직접 구현.</li>
-                        </ul>
+                <div class="space-y-2">
+                    <div class="flex items-start">
+                        <span class="text-gray-400 font-light text-sm leading-relaxed">- 'Attention is All You Need' 기반 Transformer 구조를 from-scratch로 구현</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-gray-400 font-light text-sm leading-relaxed">- 과적합 및 학습 속도 저하 문제를 튜닝과 전처리 최적화로 개선하며 모델 구조 이해도 확보</span>
                     </div>
                 </div>
-                <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
+
         </div>
     </section>
     <!-- 5. Extracurricular Activities -->
@@ -452,33 +382,43 @@ title: Portfolio
     </section>
     <!-- 6. Skills -->
     <section class="mb-20">
-        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Tech Skills</h2>
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Tech Stack</h2>
         <div class="exp-card p-8 border-l-2 border-gray-800">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-8 text-sm">
+                
                 <div>
-                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Language</span>
+                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">AI / ML</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
-                        Python, C++, R, LaTeX
+                        PyTorch, TensorFlow<br>
+                        LLM/SLM Fine-tuning<br>
+                        Reinforcement Learning (RL)
                     </p>
                 </div>
+                
                 <div>
-                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">DL / ML Framework</span>
+                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Frameworks & Libraries</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
-                        TensorFlow, PyTorch, HuggingFace, LangChain, LangGraph, Scikit-learn
+                        LangGraph, Hugging Face<br>
+                        SGLang, LangChain
                     </p>
                 </div>
+                
                 <div>
-                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">MLOps & Backend</span>
+                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Infra & System</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
-                        Docker, FastAPI, TensorRT, ONNX, Kafka
+                        Python, C, Linux<br>
+                        Docker, Neo4j, TCP Socket
                     </p>
                 </div>
+                
                 <div>
-                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Database & Analysis</span>
+                    <span class="text-gray-600 block mb-3 uppercase tracking-widest font-bold text-xs">Database</span>
                     <p class="text-gray-300 font-medium leading-relaxed">
-                        Vector DB (FAISS, Weaviate), Neo4j, PostgreSQL, Pandas, Numpy
+                        Vector DB (Weaviate, FAISS, ChromaDB)<br>
+                        MySQL, MariaDB, PostgreSQL
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -524,3 +464,4 @@ title: Portfolio
         <p>© 2026 JEONGHEESIK.</p>
     </footer>
 </div>
+\n
