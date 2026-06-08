@@ -19,8 +19,10 @@ toc: true
 ## <u>Information</u>
 - **Current Role**: AI Engineer @ NEXTITS
 - **Focus Area**: Agentic Systems / On-Device AI / Embodied AI
-📧 koto144@gmail.com
-💻 [**Github**](https://github.com/JEONGHEESIK) | 👩‍💻 [**Linkedin**](https://www.linkedin.com/in/jeongheesik/) | 🎨 [**Instagram**](https://instagram.com/25thonmay)
+
+<i class="fas fa-envelope fa-fw"></i> koto144@gmail.com
+<br>
+<i class="fab fa-github fa-fw"></i> [**Github**](https://github.com/JEONGHEESIK) | <i class="fab fa-linkedin fa-fw"></i> [**Linkedin**](https://www.linkedin.com/in/jeongheesik/) | <i class="fab fa-instagram fa-fw"></i> [**Instagram**](https://instagram.com/25thonmay)
 
 <br>
 
