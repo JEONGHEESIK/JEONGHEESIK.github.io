@@ -269,139 +269,119 @@ title: Portfolio
             </div>
         </div>
         <div class="exp-card p-8 border-l-2 border-gray-800">
-            <h3 class="font-bold text-white uppercase tracking-tight text-lg mb-4">Publications & Honors</h3>
-            <ul class="text-gray-500 text-sm list-disc list-inside space-y-3 font-light">
-                <li>
-                    <strong class="text-gray-300">Task-Aware Randomized SVD (가제)</strong><br>
-                    <span class="ml-5 inline-block text-xs mt-1">현재 논문 작성을 위한 실험 진행 중입니다.</span><br>
-                    <div class="ml-5 mt-1 flex gap-2">
-                        <span class="badge-outline">Ongoing Research</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- 4. Major Projects -->
-    <section class="mb-20">
-        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Major Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            <div class="flex flex-col gap-3">
-                <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[220px]">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="uppercase tracking-tight leading-tight">Agentic Graph RAG</h3>
-                            <div class="flex flex-col items-end gap-1">
-                                <span class="badge-outline">개인 프로젝트</span>
-                                <span class="mono text-xs text-gray-700">2026.01 - 2026.03</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-500 font-light mb-6 text-sm">SGLang 최적화 기반 실시간 지능형 에이전트 및 Graph RAG 아키텍처 구축</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-tag">LangGraph</span><span class="tech-tag">SGLang</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Optimization</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mt-4 mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
-                </div>
-                <div class="par-card p-6 space-y-3">
-                    <div class="flex items-start">
-                        <span class="par-label mono">P:</span>
-                        <span class="par-text">단순 검색 기반 RAG의 한계로 인해, 외부 도구(Tool) 활용이 필요한 복잡한 질의에서의 추론 실패 및 높은 지연 시간 발생.</span>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="par-label mono">A:</span>
-                        <span class="par-text"><strong>LLM Tool Router</strong>를 통해 MCP 기반 도구 제어와 Graph 검색을 동적으로 분기하고, Quality Gate를 통한 자기 반성(Self-Correction) 로직 구현.</span>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="par-label mono">R:</span>
-                        <span class="par-text">자율적 도구 제어(Tool Orchestration)가 가능한 에이전트를 구축하였으며, SGLang 최적화로 Latency를 <strong>30초 대에서 10초 이내(67% 개선)</strong>로 단축하여 가용성 확보.</span>
-                    </div>
-                </div>
+            <h3 class="font-bold text-white uppercase tracking-tight text-lg mb-4">Master's Thesis (Ongoing Research)</h3>
+            <div class="mb-4">
+                <strong class="text-gray-300 text-md">Task-Aware Randomized SVD (가제)</strong><br>
+                <span class="text-gray-500 text-sm block mt-1">실시간 On-Device/엣지 AI 환경에서 핵심 소수 데이터의 정보 손실 방지를 위한 고속 차원 축소 및 추론 방법론</span>
             </div>
-            <div class="flex flex-col gap-3">
-                <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[220px]">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="uppercase tracking-tight leading-tight">Crazy Arcade RL Agent</h3>
-                            <div class="flex flex-col items-end gap-1">
-                                <span class="badge-outline">4인 팀 프로젝트</span>
-                                <span class="mono text-xs text-gray-700">2025.10 - 2025.12</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-500 font-light mb-6 text-sm">C++/Python TCP 소켓 연동 기반 실시간 대전 강화학습 모델 설계</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mt-4 mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
+            <div class="space-y-3">
+                <div class="flex items-start">
+                    <span class="par-label mono w-5 mt-0.5 text-red-400">P:</span>
+                    <span class="par-text leading-relaxed">기존 PCA/SVD 계열 차원 축소는 전체 분산(Variance) 중심으로 압축하여, 빈도는 낮으나 치명적으로 중요한 이상 신호(Critical Minority Data)가 저차원 표현에서 희석되는 한계 존재.</span>
                 </div>
-                <div class="par-card p-6 space-y-3">
-                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">실시간 대전 환경의 고차원 상태 데이터 처리 및 Python 기반 학습의 지연 시간 병목.</span></div>
-                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">CNN Fusion 아키텍처 도입 및 C++ 소켓 통신 모듈 최적화로 전송 효율 2배 향상.</span></div>
-                    <div class="flex items-start"><span class="par-label mono">R:</span><span class="par-text">특정 장애물 패턴에 에이전트가 오버피팅되는 한계를 발견하여 일반화 연구 진행 중.</span></div>
+                <div class="flex items-start">
+                    <span class="par-label mono w-5 mt-0.5 text-blue-400">A:</span>
+                    <span class="par-text leading-relaxed">Task 목적을 반영한 가중치(Task-Aware weighting)와 Randomized SVD를 결합하여, 연산 복잡도는 낮추면서도 핵심 소수 신호를 보존하는 아키텍처 설계.</span>
+                </div>
+                <div class="flex items-start">
+                    <span class="par-label mono w-5 mt-0.5 text-green-400">S:</span>
+                    <span class="par-text leading-relaxed"><strong>Status & Validation:</strong> Isaac Sim 시뮬레이션 환경 구축 완료. 급작스러운 장애물 출현, 기기 자세 불균형 등 제어 실패를 유발할 수 있는 'Corner Case'를 의도적으로 생성하여, 압축률 변화에 따른 소수 클래스 보존율과 지연 시간 최소화 가능성을 탐색 및 검증 중.</span>
                 </div>
             </div>
         </div>
     </section>
-    <!-- 4-1. Mini Projects -->
+    <!-- 4. Projects -->
     <section class="mb-20">
-        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Mini Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            <div class="flex flex-col gap-3">
-                <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[200px]">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="uppercase tracking-tight">SLM Query Rewriter</h3>
-                            <span class="mono text-xs text-gray-700">2025</span>
-                        </div>
-                        <p class="text-gray-500 font-light mb-4 text-sm">Qwen3-0.6B 기반 DPO 파인튜닝을 통한 질의 유의어 최적화.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-tag">PyTorch</span><span class="tech-tag">DPO</span><span class="tech-tag">HuggingFace</span>
-                        </div>
+        <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Projects</h2>
+        <div class="space-y-6">
+            <div class="exp-card p-8 border-l-2 border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Agentic Graph RAG</h3>
+                    <div class="flex flex-col items-start md:items-end gap-1">
+                        <span class="mono text-xs text-gray-600 uppercase">2026.01 - 2026.03 | 개인 프로젝트</span>
                     </div>
-                    <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mt-4 mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <div class="par-card p-6 space-y-3">
-                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">모호한 사용자 질의가 임베딩되어 검색 정확도 저하.</span></div>
-                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">SLM 모델에 DPO 및 DoRA 기법을 적용하여 검색 친화적 리라이팅 수행.</span></div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tech-tag">LangGraph</span><span class="tech-tag">SGLang</span><span class="tech-tag">Neo4j</span><span class="tech-tag">Optimization</span>
                 </div>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 My Role</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>전체 아키텍처 설계 및 SGLang 기반 파이프라인 최적화 단독 수행</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Problem & Action</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>단순 검색 기반 RAG의 한계로 인해 외부 도구(Tool) 활용이 필요한 복잡한 질의 추론 실패 문제 해결.</li>
+                            <li><strong>LLM Tool Router</strong>를 통해 MCP 기반 도구 제어와 Graph 검색을 동적으로 분기.</li>
+                            <li>Quality Gate를 통한 자기 반성(Self-Correction) 로직 구현.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Result</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>자율적 도구 제어(Tool Orchestration)가 가능한 에이전트 구축.</li>
+                            <li>SGLang 최적화로 Inference Latency <strong>30초 ➔ 10초 이내(67% 개선)</strong> 단축.</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
-            <div class="flex flex-col gap-3">
-                <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[200px]">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="uppercase tracking-tight">Understanding Mamba</h3>
-                            <span class="mono text-xs text-gray-700">2026</span>
-                        </div>
-                        <p class="text-gray-500 font-light mb-4 text-sm">Selective SSM의 핵심 동작 원리 파악을 위한 아키텍처 분석 및 구현.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-tag">PyTorch</span><span class="tech-tag">SSM</span>
-                        </div>
+            <div class="exp-card p-8 border-l-2 border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">Crazy Arcade RL Agent</h3>
+                    <div class="flex flex-col items-start md:items-end gap-1">
+                        <span class="mono text-xs text-gray-600 uppercase">2025.10 - 2025.12 | 4인 팀 프로젝트</span>
                     </div>
-                    <a href="https://github.com/JEONGHEESIK/Mamba-Selective-SSM" class="mt-4 mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <div class="par-card p-6 space-y-3">
-                    <div class="flex items-start"><span class="par-label mono">Why:</span><span class="par-text">Transformer의 O(N²) 연산 병목 극복 대안 탐색.</span></div>
-                    <div class="flex items-start"><span class="par-label mono">What:</span><span class="par-text">Mamba 논문 기반 Selective SSM 아키텍처 구현 및 O(N) 연산량 확인.</span></div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tech-tag">PyTorch</span><span class="tech-tag">RL</span><span class="tech-tag">C++ Socket</span>
                 </div>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 My Role</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>C++/Python TCP 소켓 연동 모듈 개발 및 실시간 대전 데이터 파이프라인 구축</li>
+                            <li>강화학습 에이전트의 상태 데이터 전처리 및 CNN 모델링 (가이드: 실제 역할로 수정 필요)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Problem & Action</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>실시간 대전 환경의 고차원 상태 데이터 처리 및 Python 기반 학습의 지연 시간 병목 발생.</li>
+                            <li>CNN Fusion 아키텍처 도입 및 C++ 소켓 통신 모듈 최적화로 전송 효율 2배 향상.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Result</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>실시간 대전이 가능한 수준의 에이전트 레이턴시 확보. 특정 장애물 패턴에 오버피팅되는 한계를 발견하여 일반화 연구 진행 중.</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://github.com/JEONGHEESIK/CrazyArcade" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
-            <div class="flex flex-col gap-3">
-                <div class="project-card p-8 flex flex-col justify-between h-auto min-h-[200px]">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="uppercase tracking-tight">Custom Vector RAG</h3>
-                            <span class="mono text-xs text-gray-700">2025</span>
-                        </div>
-                        <p class="text-gray-500 font-light mb-4 text-sm">외부 프레임워크 의존성 없는 순수 Python RAG 엔진 구축.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-tag">Python</span><span class="tech-tag">Vector DB</span>
-                        </div>
+            <div class="exp-card p-8 border-l-2 border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                    <h3 class="font-bold text-white uppercase tracking-tight text-xl">SLM Query Rewriter</h3>
+                    <div class="flex flex-col items-start md:items-end gap-1">
+                        <span class="mono text-xs text-gray-600 uppercase">2025 | 개인 프로젝트</span>
                     </div>
-                    <a href="https://github.com/JEONGHEESIK/Vector_RAG" class="mt-4 mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank">View Repo _</a>
                 </div>
-                <div class="par-card p-6 space-y-3">
-                    <div class="flex items-start"><span class="par-label mono">P:</span><span class="par-text">상용 RAG 프레임워크의 추상화로 인한 내부 구조 커스터마이징의 한계.</span></div>
-                    <div class="flex items-start"><span class="par-label mono">A:</span><span class="par-text">임베딩, 코사인 유사도 연산 로직을 순수 Python 라이브러리로 직접 구현.</span></div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tech-tag">PyTorch</span><span class="tech-tag">DPO</span><span class="tech-tag">HuggingFace</span>
                 </div>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-gray-300 font-semibold text-sm mb-2">🔹 Overview & Action</h4>
+                        <ul class="text-gray-500 text-sm list-disc list-inside space-y-1 font-light ml-2">
+                            <li>모호한 사용자 질의가 임베딩되어 검색 정확도가 저하되는 문제를 해결하기 위해, Qwen3-0.6B 기반 SLM 모델에 DPO 및 DoRA 기법을 적용하여 검색 친화적 질의 리라이팅 수행.</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="https://github.com/JEONGHEESIK/Qwen-DPO-Query-Rewriter" class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print" target="_blank"><i class="fab fa-github"></i> View Repository</a>
             </div>
         </div>
     </section>
