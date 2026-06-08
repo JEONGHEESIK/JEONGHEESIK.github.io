@@ -44,6 +44,52 @@ title: Portfolio
     body.hide-sidebar #sidebar { display: none !important; }
     body.hide-sidebar #main-wrapper { padding-left: 0 !important; margin-left: 0 !important; }
 
+    /* Light Mode Overrides */
+    html[data-mode="light"] #portfolio-wrapper { color: #4b5563; }
+    html[data-mode="light"] #portfolio-wrapper .project-card,
+    html[data-mode="light"] #portfolio-wrapper .exp-card,
+    html[data-mode="light"] #portfolio-wrapper .par-card {
+        background: #ffffff;
+        border-color: #e5e7eb;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    html[data-mode="light"] #portfolio-wrapper .project-card:hover {
+        background: #f9fafb;
+        border-color: #9ca3af;
+    }
+    html[data-mode="light"] #portfolio-wrapper .tech-tag {
+        background: #f3f4f6;
+        color: #4b5563;
+        border-color: #d1d5db;
+    }
+    html[data-mode="light"] #portfolio-wrapper .edu-badge {
+        color: #111827 !important;
+        border-color: #6b7280;
+    }
+    html[data-mode="light"] #portfolio-wrapper h1,
+    html[data-mode="light"] #portfolio-wrapper h3 {
+        color: #111827 !important;
+    }
+    html[data-mode="light"] #portfolio-wrapper .par-label { color: #4b5563; }
+    html[data-mode="light"] #portfolio-wrapper .par-text { color: #374151; }
+    
+    /* Tailwind Color Overrides for Light Mode */
+    html[data-mode="light"] #portfolio-wrapper .text-white { color: #111827 !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-gray-200 { color: #1f2937 !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-gray-300 { color: #374151 !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-gray-400 { color: #4b5563 !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-gray-500 { color: #6b7280 !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-gray-600 { color: #9ca3af !important; }
+    html[data-mode="light"] #portfolio-wrapper .text-gray-700 { color: #d1d5db !important; }
+    
+    html[data-mode="light"] #portfolio-wrapper .border-gray-900 { border-color: #e5e7eb !important; }
+    html[data-mode="light"] #portfolio-wrapper .border-gray-800 { border-color: #d1d5db !important; }
+    html[data-mode="light"] #portfolio-wrapper .border-gray-700 { border-color: #9ca3af !important; }
+    
+    html[data-mode="light"] #portfolio-wrapper .hover\:text-white:hover { color: #111827 !important; }
+    html[data-mode="light"] #portfolio-wrapper .hover\:border-white:hover { border-color: #111827 !important; }
+    html[data-mode="light"] #sidebar-toggle { background: #ffffff !important; border-color: #d1d5db !important; color: #4b5563 !important; }
+
     /* Floating Sidebar Toggle Button */
     #sidebar-toggle {
         top: 20px;
