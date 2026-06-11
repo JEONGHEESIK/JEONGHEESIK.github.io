@@ -504,9 +504,9 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">Agentic AI 아키텍처 설계 및 시스템 성능 최적화</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.03 - Present | NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Problem:</strong> 복잡한 질의 처리 시 기존 RAG 환경의 실패 및 엔드투엔드 추론 과정에서의 심각한 지연 시간 발생</li>
-                    <li><strong>Action:</strong> LangGraph 상태 머신, LLM Tool Router 및 Self-Correction 루프를 활용하여 Agentic Graph RAG 아키텍처를 유연하게 구축. 이후 SGLang 기반의 추론 최적화 및 시스템 리소스를 고려한 모델 로딩 전략(Resource-aware model loading)을 도입하여 시스템 하부 레이어 튜닝을 수행.</li>
-                    <li><strong>Result:</strong> 최신 에이전트 시스템을 안정적으로 배포함과 동시에, 실행 병목 현상을 해결하여 엔드투엔드 추론 지연 시간(Latency)을 약 30% 단축하여 실서비스에 적합한 응답성 확보.</li>
+                    <li>복잡한 질의 처리 시 기존 RAG 환경의 실패 및 엔드투엔드 추론 과정에서의 심각한 지연 시간 발생 문제를 해결</li>
+                    <li>LangGraph 상태 머신, LLM Tool Router 및 Self-Correction 루프를 활용하여 Agentic Graph RAG 아키텍처를 유연하게 구축. 이후 SGLang 기반의 추론 최적화 및 시스템 리소스를 고려한 모델 로딩 전략(Resource-aware model loading)을 도입하여 시스템 하부 레이어 튜닝을 수행</li>
+                    <li>최신 에이전트 시스템을 안정적으로 배포함과 동시에, 실행 병목 현상을 해결하여 엔드투엔드 추론 지연 시간(Latency)을 약 30% 단축하여 실서비스에 적합한 응답성 확보</li>
                 </ul>
                 <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG"
                     class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print"
@@ -518,9 +518,9 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">한국어 Query Rewriter SLM 파인튜닝 및 서비스 연동</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Problem:</strong> 사용자 질의의 모호성으로 인해 검색 정확도가 저하되는 문제 발생</li>
-                    <li><strong>Action:</strong> 소형 언어 모델(SLM)에 DPO 및 DoRA 파인튜닝을 직접 수행하고 질의 재작성 기능을 파이프라인에 통합.</li>
-                    <li><strong>Result:</strong> 상위 레이어의 검색 품질을 개선하는 동시에, 모델의 파라미터 규모와 수학적 연산 성능 간의 트레이드오프(Trade-off) 등 소형 모델의 한계점까지 밀도 있게 검증.</li>
+                    <li>사용자 질의의 모호성으로 인해 검색 정확도가 저하되는 문제 발생 해결</li>
+                    <li>소형 언어 모델(SLM)에 DPO 및 DoRA 파인튜닝을 직접 수행하고 질의 재작성 기능을 파이프라인에 통합</li>
+                    <li>상위 레이어의 검색 품질을 개선하는 동시에, 모델의 파라미터 규모와 수학적 연산 성능 간의 트레이드오프(Trade-off) 등 소형 모델의 한계점까지 밀도 있게 검증</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
@@ -529,9 +529,9 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">Custom RAG 파이프라인</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Problem:</strong> 상용 프레임워크 사용 시 검색 파이프라인 내부 로직을 세밀하게 제어하거나 성능을 극대화하기 어려움</li>
-                    <li><strong>Action:</strong> 상용 하이레벨 프레임워크에 의존하지 않고, 코사인 유사도 연산 및 Top-K 검색 로직을 Python 기반으로 직접 설계하고 메커니즘을 구현.</li>
-                    <li><strong>Result:</strong> 시스템 내부 제어권을 완전히 확보하여, 프레임워크에 가려져 있던 검색 파이프라인의 미세한 성능 튜닝(Granular performance tuning)이 가능한 기술적 기반 확보.</li>
+                    <li>상용 프레임워크 사용 시 검색 파이프라인 내부 로직을 세밀하게 제어하거나 성능을 극대화하기 어려운 문제 해결</li>
+                    <li>상용 하이레벨 프레임워크에 의존하지 않고, 코사인 유사도 연산 및 Top-K 검색 로직을 Python 기반으로 직접 설계하고 메커니즘을 구현</li>
+                    <li>시스템 내부 제어권을 완전히 확보하여, 프레임워크에 가려져 있던 검색 파이프라인의 미세한 성능 튜닝(Granular performance tuning)이 가능한 기술적 기반 확보</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
@@ -540,9 +540,9 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">Dynamic Pricing 추천 모델</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.08 - 2024.11 | PRICEONE</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Problem:</strong> 경쟁사 가격 모니터링과 가격 산정이 수작업 중심으로 이루어져 운영 효율성 저하</li>
-                    <li><strong>Action:</strong> 대규모 수집을 위한 OTA 데이터 자동 수집 파이프라인을 아키텍팅하고, 날씨·계절성 등 다양한 외부 환경 신호를 반영한 피처 엔지니어링(Feature Engineering) 워크플로우 및 데이터 전처리 환경 설계.</li>
-                    <li><strong>Result:</strong> 대규모 데이터 인프라 기반을 안정적으로 구축하여 기존의 수작업 프로세스를 데이터 중심 추천 모델 구조로 완전히 전환하는 토대 마련.</li>
+                    <li>경쟁사 가격 모니터링과 가격 산정이 수작업 중심으로 이루어져 운영 효율성 저하되는 문제 해결</li>
+                    <li>대규모 수집을 위한 OTA 데이터 자동 수집 파이프라인을 아키텍팅하고, 날씨·계절성 등 다양한 외부 환경 신호를 반영한 피처 엔지니어링(Feature Engineering) 워크플로우 및 데이터 전처리 환경 설계</li>
+                    <li>대규모 데이터 인프라 기반을 안정적으로 구축하여 기존의 수작업 프로세스를 데이터 중심 추천 모델 구조로 완전히 전환하는 토대 마련</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
@@ -551,9 +551,9 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">B2G NLP 여론 분석 플랫폼 개발 및 운영</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2023.04 - 2024.07 | SPEECHLOG</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Problem:</strong> 다수의 정부 부처가 동시에 안정적으로 활용할 수 있는 대규모 텍스트 기반 여론 분석 시스템 구축 필요</li>
-                    <li><strong>Action:</strong> 대용량 동시 분석 워크로드를 처리하기 위해 데이터 수집·분석 파이프라인과 백엔드 시스템 아키텍처를 1인 전담하여 설계 및 구축.</li>
-                    <li><strong>Result:</strong> 46개 정부 부처 및 공공기관이 실제 상용 환경에서 매일 활용하는 대규모 시스템을 성공적으로 서비스화하고 안정적으로 운영.</li>
+                    <li>다수의 정부 부처가 동시에 안정적으로 활용할 수 있는 대규모 텍스트 기반 여론 분석 시스템 구축</li>
+                    <li>대용량 동시 분석 워크로드를 처리하기 위해 데이터 수집·분석 파이프라인과 백엔드 시스템 아키텍처를 1인 전담하여 설계 및 구축</li>
+                    <li>46개 정부 부처 및 공공기관이 실제 상용 환경에서 매일 활용하는 대규모 시스템을 성공적으로 서비스화하고 안정적으로 운영</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
@@ -562,8 +562,8 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">딥테크 팁스(TIPS) R&D 모델링</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">SPEECHLOG</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Action:</strong> 정부 지원 딥테크 과제(TIPS)의 핵심 연구원으로서, 대화형 AI 페르소나 구축을 위한 수학적 모델링 및 탐색적 파인튜닝(Exploratory fine-tuning) 수행.</li>
-                    <li><strong>Result:</strong> 서비스 확장을 위한 고도화된 AI 모델링 방향성을 정립하고 깊이 있는 프로토타이핑 경험 확보.</li>
+                    <li>정부 지원 딥테크 과제(TIPS)의 핵심 연구원으로서, 대화형 AI 페르소나 구축을 위한 수학적 모델링 및 탐색적 파인튜닝(Exploratory fine-tuning) 수행</li>
+                    <li>서비스 확장을 위한 고도화된 AI 모델링 방향성을 정립하고 깊이 있는 프로토타이핑 경험 확보</li>
                 </ul>
             </div>
         </div>
@@ -578,8 +578,8 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">Mamba Architecture Implementation from Scratch</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.04 - Present | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Action:</strong> Linear-Time Sequence Modeling을 평가하기 위해 Mamba 시퀀스 모델을 from-scratch로 직접 구현.</li>
-                    <li><strong>Result:</strong> 기존 Transformer의 O(N²) 어텐션 연산을 O(N) 복잡도의 Selective State Space Models (SSMs)로 대체하여 컨텍스트 인지(Context-awareness) 메커니즘 검증.</li>
+                    <li>Linear-Time Sequence Modeling을 평가하기 위해 Mamba 시퀀스 모델을 from-scratch로 직접 구현</li>
+                    <li>기존 Transformer의 O(N²) 어텐션 연산을 O(N) 복잡도의 Selective State Space Models (SSMs)로 대체하여 컨텍스트 인지(Context-awareness) 메커니즘 검증</li>
                 </ul>
                 <a href="https://github.com/JEONGHEESIK/Mamba-Selective-SSM"
                     class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print"
@@ -591,8 +591,8 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">Crazy Arcade RL Agent</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2025.10 - 2025.12 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Action:</strong> TCP 소켓 통신을 기반으로 C++로 작성된 핵심 게임 서버 엔진과 Python 기반의 강화학습 알고리즘 에이전트를 연동하는 이기종 언어 통합(Cross-Language Integration) 환경을 설계.</li>
-                    <li><strong>Result:</strong> 데이터 전송 효율을 극대화하기 위해 CNN Fusion 구조 및 네트워크 패킷 페이로드 최적화를 구현하여 통신 효율성을 2배 향상시켰으며, 실시간 시스템 단의 연동 및 디버깅 기초 역량 확보.</li>
+                    <li>TCP 소켓 통신을 기반으로 C++로 작성된 핵심 게임 서버 엔진과 Python 기반의 강화학습 알고리즘 에이전트를 연동하는 이기종 언어 통합(Cross-Language Integration) 환경을 설계</li>
+                    <li>데이터 전송 효율을 극대화하기 위해 CNN Fusion 구조 및 네트워크 패킷 페이로드 최적화를 구현하여 통신 효율성을 2배 향상시켰으며, 실시간 시스템 단의 연동 및 디버깅 기초 역량 확보</li>
                 </ul>
                 <a href="https://github.com/JEONGHEESIK/CrazyArcade"
                     class="mt-5 inline-block mono text-[10px] text-gray-500 hover:text-white tracking-widest uppercase no-print"
@@ -604,8 +604,8 @@ title: Portfolio
                 <h3 class="text-white font-bold text-lg mb-1">PyTorch 기반 Transformer 번역기 모델</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2024.03 - 2024.06 | Personal</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
-                    <li><strong>Action:</strong> 'Attention is All You Need' 논문의 기본 어텐션 메커니즘과 Transformer 구조를 다른 라이브러리 없이 from-scratch로 직접 구현.</li>
-                    <li><strong>Result:</strong> 모델 학습 과정에서의 과적합 및 연산 효율성 저하 문제를 직접 해결하며, 딥러닝 아키텍처의 근본적인 하부 동작 원리와 연산 복잡도 구조에 대한 깊은 이해도 확보.</li>
+                    <li>'Attention is All You Need' 논문의 기본 어텐션 메커니즘과 Transformer 구조를 다른 라이브러리 없이 from-scratch로 직접 구현</li>
+                    <li>모델 학습 과정에서의 과적합 및 연산 효율성 저하 문제를 직접 해결하며, 딥러닝 아키텍처의 근본적인 하부 동작 원리와 연산 복잡도 구조에 대한 깊은 이해도 확보</li>
                 </ul>
             </div>
         </div>
