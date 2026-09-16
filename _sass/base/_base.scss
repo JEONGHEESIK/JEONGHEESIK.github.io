@@ -10,25 +10,23 @@
 }
 
 html {
-  @media (prefers-color-scheme: light) {
-    &:not([data-mode]),
-    &[data-mode='light'] {
-      @include light.styles;
-    }
-
-    &[data-mode='dark'] {
-      @include dark.styles;
-    }
+  &[data-bs-theme='dark'],
+  &[data-mode='dark'] {
+    @include dark.styles;
   }
 
-  @media (prefers-color-scheme: dark) {
-    &:not([data-mode]),
-    &[data-mode='dark'] {
-      @include dark.styles;
+  &[data-bs-theme='light'],
+  &[data-mode='light'] {
+    @include light.styles;
+  }
+
+  &:not([data-bs-theme]):not([data-mode]) {
+    @media (prefers-color-scheme: light) {
+      @include light.styles;
     }
 
-    &[data-mode='light'] {
-      @include light.styles;
+    @media (prefers-color-scheme: dark) {
+      @include dark.styles;
     }
   }
 

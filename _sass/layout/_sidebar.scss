@@ -230,6 +230,9 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       @extend %sidebar-links;
       @extend %sidebar-link-hover;
 
+      border: 0;
+      padding: 0;
+      cursor: pointer;
       margin-right: v.$sb-btn-gap;
 
       @include bp.xxxl {
@@ -237,8 +240,12 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       }
 
       i {
-        font-size: 95%;
+        font-size: 0.95rem;
         line-height: $btn-size;
+      }
+
+      + .dropdown-menu {
+        display: none !important;
       }
     }
 

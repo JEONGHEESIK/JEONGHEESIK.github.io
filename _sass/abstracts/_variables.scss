@@ -2,6 +2,8 @@
 
 /* theme - required by Chirpy's @use 'abstracts/variables' with ($theme: ...) */
 $theme: '' !default;
+$theme-attr: 'data-bs-theme' !default;
+$theme-options: light, dark !default;
 
 /* sidebar */
 

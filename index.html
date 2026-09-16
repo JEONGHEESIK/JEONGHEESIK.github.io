@@ -3,6 +3,15 @@ layout: default
 title: Portfolio
 ---
 <script>
+    (function() {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+            theme = 'dark';
+            localStorage.setItem('theme', 'dark');
+        }
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        document.documentElement.setAttribute('data-mode', theme);
+    })();
     tailwind.config = { corePlugins: { preflight: false } }
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -159,6 +168,52 @@ title: Portfolio
         color: var(--text-color) !important;
     }
 
+    /* Dark Mode Defaults & Overrides (Pure Black Theme from original portfolio) */
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) body,
+    html[data-mode="dark"] body,
+    html[data-bs-theme="dark"] body {
+        background-color: #000000 !important;
+        color: #d1d5db !important;
+    }
+
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper,
+    html[data-mode="dark"] #portfolio-wrapper,
+    html[data-bs-theme="dark"] #portfolio-wrapper {
+        color: #d1d5db;
+    }
+
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper .project-card,
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper .exp-card,
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper .par-card,
+    html[data-mode="dark"] #portfolio-wrapper .project-card,
+    html[data-mode="dark"] #portfolio-wrapper .exp-card,
+    html[data-mode="dark"] #portfolio-wrapper .par-card,
+    html[data-bs-theme="dark"] #portfolio-wrapper .project-card,
+    html[data-bs-theme="dark"] #portfolio-wrapper .exp-card,
+    html[data-bs-theme="dark"] #portfolio-wrapper .par-card {
+        background: #080808 !important;
+        border: 1px solid #1a1a1a !important;
+    }
+
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper .project-card:hover,
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper .exp-card:hover,
+    html[data-mode="dark"] #portfolio-wrapper .project-card:hover,
+    html[data-mode="dark"] #portfolio-wrapper .exp-card:hover,
+    html[data-bs-theme="dark"] #portfolio-wrapper .project-card:hover,
+    html[data-bs-theme="dark"] #portfolio-wrapper .exp-card:hover {
+        background: #0f0f0f !important;
+        border-color: #ffffff !important;
+    }
+
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper h1,
+    html:not([data-mode="light"]):not([data-bs-theme="light"]) #portfolio-wrapper h3,
+    html[data-mode="dark"] #portfolio-wrapper h1,
+    html[data-mode="dark"] #portfolio-wrapper h3,
+    html[data-bs-theme="dark"] #portfolio-wrapper h1,
+    html[data-bs-theme="dark"] #portfolio-wrapper h3 {
+        color: #ffffff !important;
+    }
+
     /* Sidebar hide toggle logic */
     body.hide-sidebar #sidebar {
         display: none !important;
@@ -170,103 +225,135 @@ title: Portfolio
     }
 
     /* Light Mode Overrides */
-    html[data-mode="light"] #portfolio-wrapper {
+    html[data-mode="light"] body,
+    html[data-bs-theme="light"] body {
+        background-color: #ffffff !important;
+        color: #1f2937 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper,
+    html[data-bs-theme="light"] #portfolio-wrapper {
         color: #4b5563;
     }
 
     html[data-mode="light"] #portfolio-wrapper .project-card,
     html[data-mode="light"] #portfolio-wrapper .exp-card,
-    html[data-mode="light"] #portfolio-wrapper .par-card {
-        background: #ffffff;
-        border-color: #e5e7eb;
+    html[data-mode="light"] #portfolio-wrapper .par-card,
+    html[data-bs-theme="light"] #portfolio-wrapper .project-card,
+    html[data-bs-theme="light"] #portfolio-wrapper .exp-card,
+    html[data-bs-theme="light"] #portfolio-wrapper .par-card {
+        background: #ffffff !important;
+        border-color: #e5e7eb !important;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
     html[data-mode="light"] #portfolio-wrapper .project-card:hover,
-    html[data-mode="light"] #portfolio-wrapper .exp-card:hover {
-        background: #f9fafb;
-        border-color: #9ca3af;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .tech-tag {
-        background: #f3f4f6;
-        color: #4b5563;
-        border-color: #d1d5db;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .edu-badge {
-        color: #111827 !important;
-        border-color: #6b7280;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper h1,
-    html[data-mode="light"] #portfolio-wrapper h3 {
-        color: #111827 !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .par-label {
-        color: #4b5563;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .par-text {
-        color: #374151;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .badge-outline {
-        color: #6b7280;
-        border-color: #d1d5db;
-    }
-
-    /* Tailwind Color Overrides for Light Mode */
-    html[data-mode="light"] #portfolio-wrapper .text-white {
-        color: #111827 !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .text-gray-200 {
-        color: #1f2937 !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .text-gray-300 {
-        color: #374151 !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .text-gray-400 {
-        color: #4b5563 !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .text-gray-500 {
-        color: #6b7280 !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .text-gray-600 {
-        color: #9ca3af !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .text-gray-700 {
-        color: #d1d5db !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .border-gray-900 {
-        border-color: #e5e7eb !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .border-gray-800 {
-        border-color: #d1d5db !important;
-    }
-
-    html[data-mode="light"] #portfolio-wrapper .border-gray-700 {
+    html[data-mode="light"] #portfolio-wrapper .exp-card:hover,
+    html[data-bs-theme="light"] #portfolio-wrapper .project-card:hover,
+    html[data-bs-theme="light"] #portfolio-wrapper .exp-card:hover {
+        background: #f9fafb !important;
         border-color: #9ca3af !important;
     }
 
-    html[data-mode="light"] #portfolio-wrapper .hover\:text-white:hover {
+    html[data-mode="light"] #portfolio-wrapper .tech-tag,
+    html[data-bs-theme="light"] #portfolio-wrapper .tech-tag {
+        background: #f3f4f6 !important;
+        color: #4b5563 !important;
+        border-color: #d1d5db !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .edu-badge,
+    html[data-bs-theme="light"] #portfolio-wrapper .edu-badge {
+        color: #111827 !important;
+        border-color: #6b7280 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper h1,
+    html[data-mode="light"] #portfolio-wrapper h3,
+    html[data-bs-theme="light"] #portfolio-wrapper h1,
+    html[data-bs-theme="light"] #portfolio-wrapper h3 {
         color: #111827 !important;
     }
 
-    html[data-mode="light"] #portfolio-wrapper .hover\:border-white:hover {
+    html[data-mode="light"] #portfolio-wrapper .par-label,
+    html[data-bs-theme="light"] #portfolio-wrapper .par-label {
+        color: #4b5563 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .par-text,
+    html[data-bs-theme="light"] #portfolio-wrapper .par-text {
+        color: #374151 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .badge-outline,
+    html[data-bs-theme="light"] #portfolio-wrapper .badge-outline {
+        color: #6b7280 !important;
+        border-color: #d1d5db !important;
+    }
+
+    /* Tailwind Color Overrides for Light Mode */
+    html[data-mode="light"] #portfolio-wrapper .text-white,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-white {
+        color: #111827 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-200,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-gray-200 {
+        color: #1f2937 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-300,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-gray-300 {
+        color: #374151 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-400,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-gray-400 {
+        color: #4b5563 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-500,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-gray-500 {
+        color: #6b7280 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-600,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-gray-600 {
+        color: #9ca3af !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .text-gray-700,
+    html[data-bs-theme="light"] #portfolio-wrapper .text-gray-700 {
+        color: #d1d5db !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .border-gray-900,
+    html[data-bs-theme="light"] #portfolio-wrapper .border-gray-900 {
+        border-color: #e5e7eb !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .border-gray-800,
+    html[data-bs-theme="light"] #portfolio-wrapper .border-gray-800 {
+        border-color: #d1d5db !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .border-gray-700,
+    html[data-bs-theme="light"] #portfolio-wrapper .border-gray-700 {
+        border-color: #9ca3af !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .hover\:text-white:hover,
+    html[data-bs-theme="light"] #portfolio-wrapper .hover\:text-white:hover {
+        color: #111827 !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper .hover\:border-white:hover,
+    html[data-bs-theme="light"] #portfolio-wrapper .hover\:border-white:hover {
         border-color: #111827 !important;
     }
 
-    html[data-mode="light"] #sidebar-toggle {
+    html[data-mode="light"] #sidebar-toggle,
+    html[data-bs-theme="light"] #sidebar-toggle {
         background: #ffffff !important;
         border-color: #d1d5db !important;
         color: #4b5563 !important;
