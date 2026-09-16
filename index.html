@@ -153,6 +153,12 @@ title: Portfolio
         padding-right: 0;
     }
 
+    /* Force body background to follow Chirpy's CSS variables (Bootstrap overrides otherwise) */
+    body {
+        background: var(--main-bg) !important;
+        color: var(--text-color) !important;
+    }
+
     /* Sidebar hide toggle logic */
     body.hide-sidebar #sidebar {
         display: none !important;
