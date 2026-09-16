@@ -229,6 +229,17 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       @extend %button;
       @extend %sidebar-links;
       @extend %sidebar-link-hover;
+
+      margin-right: v.$sb-btn-gap;
+
+      @include bp.xxxl {
+        margin-right: v.$sb-btn-gap-lg;
+      }
+
+      i {
+        font-size: 95%;
+        line-height: $btn-size;
+      }
     }
 
     .icon-border {
