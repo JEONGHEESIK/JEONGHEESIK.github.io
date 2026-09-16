@@ -162,6 +162,26 @@ title: Portfolio
         padding-right: 0;
     }
 
+    /* Hide redundant Chirpy footer box and empty side panel on portfolio */
+    #panel-wrapper,
+    #tail-wrapper {
+        display: none !important;
+    }
+
+    /* Reset global Chirpy footer styles on portfolio footer */
+    #portfolio-wrapper footer {
+        height: auto !important;
+        background: transparent !important;
+        border-top: 1px solid #1f2937 !important;
+        padding-top: 2.5rem !important;
+    }
+
+    html[data-mode="light"] #portfolio-wrapper footer,
+    html[data-bs-theme="light"] #portfolio-wrapper footer {
+        border-top-color: #e5e7eb !important;
+        color: #6b7280 !important;
+    }
+
     /* Force body background to follow Chirpy's CSS variables (Bootstrap overrides otherwise) */
     body {
         background: var(--main-bg) !important;
@@ -855,7 +875,8 @@ title: Portfolio
         </div>
     </section>
     <footer
-        class="mt-20 pt-10 flex justify-between items-center text-gray-600 mono text-xs uppercase tracking-[0.2em] no-print border-t border-gray-900">
-        <p>© 2026 JEONGHEESIK.</p>
+        class="mt-20 pt-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-500 mono text-xs uppercase tracking-[0.2em] no-print">
+        <p>© 2026 <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white transition-colors">JEONG HEESIK</a>. Some rights reserved.</p>
+        <p class="text-[11px] text-gray-600">Using the <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">Jekyll</a>.</p>
     </footer>
 </div>
