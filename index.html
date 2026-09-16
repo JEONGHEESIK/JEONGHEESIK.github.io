@@ -392,13 +392,13 @@ title: Portfolio
             <div class="flex flex-col items-start md:items-end gap-1 text-right">
                 <span class="text-[11px] mono text-gray-600 uppercase tracking-widest block">AI Engineer</span>
                 <span class="text-[11px] mono text-gray-600 uppercase tracking-widest block">Last updated
-                    2026.06.</span>
+                    2026.09.</span>
             </div>
         </div>
         <div class="grid grid-cols-1 border-t border-gray-900 pt-10">
             <div class="flex flex-wrap gap-6 mono text-xs text-gray-500 uppercase tracking-wider mb-6">
-                <a href="https://drive.google.com/file/d/1PJAEuko7yXUdHfq_OVskdEacKqb0_tbE/view?usp=sharing" target="_blank" class="hover:text-white pb-0.5"><i
-                        class="fas fa-file-alt"></i> Resume</a>
+                <a href="https://drive.google.com/file/d/1PJAEuko7yXUdHfq_OVskdEacKqb0_tbE/view?usp=sharing"
+                    target="_blank" class="hover:text-white pb-0.5"><i class="fas fa-file-alt"></i> Resume</a>
                 <a href="mailto:koto144@gmail.com" class="hover:text-white pb-0.5"><i class="fas fa-envelope"></i>
                     Email</a>
                 <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white pb-0.5"><i
@@ -435,6 +435,18 @@ title: Portfolio
     <section class="mb-20">
         <h2 class="mono uppercase tracking-[0.3em] text-gray-600 mb-8 font-bold">/ Career</h2>
         <div class="space-y-8">
+            <div class="border-l-2 border-gray-800 pl-6">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-white uppercase tracking-tight text-lg">제조업 AX (AI Transformation) 프로젝트
+                    </h3>
+                    <span class="mono text-xs text-gray-500 uppercase">2026.06 - 2026.10</span>
+                </div>
+                <p class="text-gray-300 font-medium text-sm mb-2">Lead AI Engineer</p>
+                <ul class="text-gray-500 text-sm list-disc list-inside font-light">
+                    <li>사무직 문서 업무(보고서 작성, 데이터 입력 등) 프로세스 자동화 파이프라인 구축</li>
+                    <li>현장 설비 및 사무 데이터를 통합하기 위한 DW(Data Warehouse) 설계 및 ETL 환경 구축</li>
+                </ul>
+            </div>
             <div class="border-l-2 border-gray-800 pl-6">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-white uppercase tracking-tight text-lg">NEXTITS</h3>
@@ -511,6 +523,20 @@ title: Portfolio
             <div class="relative pl-6 border-l-2 border-gray-800">
                 <span
                     class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
+                <h3 class="text-white font-bold text-lg mb-1">제조업 AX (AI Transformation) 현장 혁신 프로젝트</h3>
+                <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.06 - 2026.10</span>
+                <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
+                    <li>제조업 현장의 보수적인 수작업 중심 문서 업무(보고서 작성, 데이터 입력 등)로 인한 운영 효율 저하 및 파편화된 데이터로 인한 분석 한계 해결</li>
+                    <li><strong class="text-white">사무직 문서 업무 자동화:</strong> LangGraph 기반의 에이전트 시스템을 아키텍팅하여 텍스트 분석, 양식 자동
+                        채우기, 보고서 초안 생성 워크플로우를 구현. 특히 현장 도메인 특화 SLM 파인튜닝을 통해 양식 인식 정확도 제고</li>
+                    <li><strong class="text-white">제조 데이터 DW(Data Warehouse) 구축:</strong> 현장 설비 및 사무 데이터를 통합하기 위한 전처리
+                        워크플로우 및 ETL 데이터 파이프라인 설계. PostgreSQL 기반의 효율적인 DW 스키마 설계 및 대용량 제조 데이터의 안정적 로딩 환경 구축</li>
+                    <li>핵심 문서 업무 프로세스에 Agentic AI 시스템 시범 도입하여 업무 처리 시간 단축 및 데이터 기반 현장 의사결정 인프라 마련</li>
+                </ul>
+            </div>
+            <div class="relative pl-6 border-l-2 border-gray-800">
+                <span
+                    class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gray-900 border-2 border-gray-600"></span>
                 <h3 class="text-white font-bold text-lg mb-1">Agentic Graph RAG</h3>
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.01 - 2026.03 | NEXTITS</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
@@ -518,7 +544,8 @@ title: Portfolio
                     <li>LangGraph 상태 머신, LLM Tool Router 및 Self-Correction 루프를 활용하여 Agentic Graph RAG 아키텍처를 유연하게 구축. 이후
                         SGLang 기반의 추론 최적화 및 시스템 리소스를 고려한 모델 로딩 전략(Resource-aware model loading)을 도입하여 시스템 하부 레이어 튜닝을 수행
                     </li>
-                    <li>최신 에이전트 시스템을 안정적으로 배포함과 동시에, 실행 병목 현상을 해결하여 엔드투엔드 추론 지연 시간(Latency)을 약 30% 단축하여 실서비스에 적합한 응답성 확보
+                    <li>최신 에이전트 시스템을 안정적으로 배포함과 동시에, 실행 병목 현상을 해결하여 엔드투엔드 추론 지연 시간(Latency)을 약 <strong
+                            class="text-white">30% 단축</strong>하여 실서비스에 적합한 응답성 확보
                     </li>
                 </ul>
                 <a href="https://github.com/JEONGHEESIK/LangGraph-Agentic-Graph-RAG"
