@@ -3,7 +3,7 @@ layout: default
 title: Portfolio
 ---
 <script>
-    (function() {
+    (function () {
         var theme = localStorage.getItem('theme');
         if (!theme) {
             theme = 'dark';
@@ -554,10 +554,10 @@ title: Portfolio
                     </h3>
                     <span class="mono text-xs text-gray-500 uppercase">2026.06 - 2026.10</span>
                 </div>
-                <p class="text-gray-300 font-medium text-sm mb-2">Lead AI Engineer</p>
+                <p class="text-gray-300 font-medium text-sm mb-2">AI Engineer</p>
                 <ul class="text-gray-500 text-sm list-disc list-inside font-light">
-                    <li>사무직 문서 업무(보고서 작성, 데이터 입력 등) 프로세스 자동화 파이프라인 구축</li>
-                    <li>현장 설비 및 사무 데이터를 통합하기 위한 DW(Data Warehouse) 설계 및 ETL 환경 구축</li>
+                    <li>비즈니스 로직 기반 자동화 파이프라인 설계(보고서 작성, 데이터 입력 등)</li>
+                    <li>제조 설비 데이터 및 사무 데이터를 통합하기 위한 DW(Data Warehouse) 구축</li>
                 </ul>
             </div>
             <div class="border-l-2 border-gray-800 pl-6">
@@ -640,11 +640,11 @@ title: Portfolio
                 <span class="mono text-xs text-gray-500 uppercase block mb-4">2026.06 - 2026.10</span>
                 <ul class="text-gray-400 font-light text-sm space-y-2 list-disc list-inside">
                     <li>제조업 현장의 보수적인 수작업 중심 문서 업무(보고서 작성, 데이터 입력 등)로 인한 운영 효율 저하 및 파편화된 데이터로 인한 분석 한계 해결</li>
-                    <li><strong class="text-white">사무직 문서 업무 자동화:</strong> LangGraph 기반의 에이전트 시스템을 아키텍팅하여 텍스트 분석, 양식 자동
-                        채우기, 보고서 초안 생성 워크플로우를 구현. 특히 현장 도메인 특화 SLM 파인튜닝을 통해 양식 인식 정확도 제고</li>
+                    <li><strong class="text-white">사무직 문서 업무 자동화:</strong> 현장의 복잡한 문서 양식을 규칙(Rule) 기반으로 구조화하고, 텍스트 분석
+                        모델을 연동하여 양식 자동 채우기 및 보고서 초안 생성 파이프라인을 구현.</li>
                     <li><strong class="text-white">제조 데이터 DW(Data Warehouse) 구축:</strong> 현장 설비 및 사무 데이터를 통합하기 위한 전처리
                         워크플로우 및 ETL 데이터 파이프라인 설계. PostgreSQL 기반의 효율적인 DW 스키마 설계 및 대용량 제조 데이터의 안정적 로딩 환경 구축</li>
-                    <li>핵심 문서 업무 프로세스에 Agentic AI 시스템 시범 도입하여 업무 처리 시간 단축 및 데이터 기반 현장 의사결정 인프라 마련</li>
+                    <li>핵심 문서 업무 프로세스에 AI 시스템을 도입하여 업무 처리 시간 단축 및 데이터 기반 현장 의사결정 인프라 마련</li>
                 </ul>
             </div>
             <div class="relative pl-6 border-l-2 border-gray-800">
@@ -876,7 +876,12 @@ title: Portfolio
     </section>
     <footer
         class="mt-20 pt-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-500 mono text-xs uppercase tracking-[0.2em] no-print">
-        <p>© 2026 <a href="https://github.com/JEONGHEESIK" target="_blank" class="hover:text-white transition-colors">JEONG HEESIK</a>. Some rights reserved.</p>
-        <p class="text-[11px] text-gray-600">Using the <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">Jekyll</a>.</p>
+        <p>© 2026 <a href="https://github.com/JEONGHEESIK" target="_blank"
+                class="hover:text-white transition-colors">JEONG HEESIK</a>. Some rights reserved.</p>
+        <p class="text-[11px] text-gray-600">Using the <a href="https://github.com/cotes2020/jekyll-theme-chirpy"
+                target="_blank" rel="noopener" class="underline hover:text-white transition-colors">Chirpy</a> theme for
+            <a href="https://jekyllrb.com" target="_blank" rel="noopener"
+                class="underline hover:text-white transition-colors">Jekyll</a>.
+        </p>
     </footer>
 </div>
